@@ -1,0 +1,34 @@
+name: 要望
+description: FirnPlanner への機能要望・改善提案
+title: "[要望] "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        要望ありがとうございます。下記の項目を埋めてください。
+
+  - type: textarea
+    id: what
+    attributes:
+      label: やりたいこと
+      description: どんな機能・改善が欲しいかを具体的に教えてください。
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: 背景・理由
+      description: なぜそれが欲しいか、どんな場面で困っているかを教えてください。
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 補足
+      description: 参考になる画像やリンクなどがあれば (任意)。
+    validations:
+      required: false

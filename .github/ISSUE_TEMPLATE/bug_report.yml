@@ -1,0 +1,71 @@
+name: 不具合報告
+description: FirnPlanner の不具合を報告する
+title: "[不具合] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        不具合の報告ありがとうございます。分かる範囲で構いませんので、下記の項目を埋めてください。
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 再現手順
+      description: どう操作すると発生するか、順を追って教えてください。
+      placeholder: |
+        1. ○○を開く
+        2. △△をする
+        3. ××が起きる
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待した動作
+      description: 本来どうなってほしかったかを教えてください。
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: 実際の動作
+      description: 実際に何が起きたかを教えてください。エラーメッセージがあれば貼り付けてください。
+    validations:
+      required: true
+
+  - type: input
+    id: macos-version
+    attributes:
+      label: macOS のバージョン
+      placeholder: 例) macOS 15.1 (Sequoia)
+    validations:
+      required: true
+
+  - type: input
+    id: app-version
+    attributes:
+      label: FirnPlanner のバージョン
+      description: メニューバー「FirnPlanner」→「FirnPlanner について」で確認できます。
+      placeholder: 例) 0.3.0
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: スクリーンショット
+      description: 画面の様子が分かるとより助かります (任意)。この欄に画像をドラッグ&ドロップすると添付できます。
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 補足
+      description: その他、伝えておきたいことがあれば。
+    validations:
+      required: false

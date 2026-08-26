@@ -1,37 +1,219 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html data-lang="ja" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FirnPlanner</title>
+<title>FirnPlanner — 1日1ファイルの Markdown デイリープランナー</title>
+<meta name="description" content="FirnPlanner は、1日1ファイルの Markdown で予定と実績を書く macOS のデイリープランナーです。チェックボックスの行を書くとタイムラインへ自動で配置されます。">
+<meta property="og:title" content="FirnPlanner">
+<meta property="og:description" content="1日1ファイルの Markdown で予定と実績を書く macOS のデイリープランナー。チェックボックスの行を書くとタイムラインへ自動で配置されます。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://l4l4dev.github.io/FirnPlanner/">
+<meta property="og:locale" content="ja_JP">
+<script>
+// テーマ・言語を描画前に確定させ、切り替え前のちらつき (FOUC) を防ぐ。
+(function () {
+  try {
+    var lang = localStorage.getItem("firnplanner-lang");
+    if (!lang) lang = (navigator.language || "en").toLowerCase().indexOf("ja") === 0 ? "ja" : "en";
+    var theme = localStorage.getItem("firnplanner-theme");
+    if (!theme) theme = (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) ? "dark" : "light";
+    document.documentElement.setAttribute("data-lang", lang);
+    document.documentElement.setAttribute("data-theme", theme);
+  } catch (e) {}
+})();
+</script>
 <link rel="stylesheet" href="style.css">
+<script src="site.js" defer></script>
 </head>
 <body>
-<main>
-  <h1>FirnPlanner</h1>
-  <p class="lede">1日1ファイルの Markdown で予定と実績を書く、macOS のデイリープランナーです。</p>
+<div class="page">
 
-  <p>チェックボックスの行を書くと、その瞬間にタイムラインへ自動で配置されます。時刻や所要時間を別画面で入力する必要はありません。ファイルの実体は Markdown 1日1ファイルなので、他のエディタやツールでも読み書きできます。</p>
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <svg class="brand-mark" viewBox="0 0 1024 1024" width="36" height="36" aria-hidden="true">
+        <defs><clipPath id="brandClip"><circle cx="512" cy="512" r="440"/></clipPath></defs>
+        <circle cx="512" cy="512" r="440" fill="#F0F4F9"/>
+        <g clip-path="url(#brandClip)">
+          <path d="M60 584 C 300 500, 560 620, 980 524 L 980 1000 L 60 1000 Z" fill="#F2A93B"/>
+          <path d="M60 680.4 C 300 609, 560 711, 980 629.4 L 980 1000 L 60 1000 Z" fill="#1E2D4D"/>
+          <path d="M60 786.8 C 300 728, 560 812, 980 744.8 L 980 1000 L 60 1000 Z" fill="#051424"/>
+          <circle cx="640" cy="596" r="50" fill="#1B7FE3"/>
+        </g>
+      </svg>
+      <span class="brand-name t">FirnPlanner</span>
+    </a>
+    <div class="toggles">
+      <div class="toggle-group lang-toggle t">
+        <button type="button" class="toggle-btn" data-set-lang="ja">日本語</button>
+        <button type="button" class="toggle-btn" data-set-lang="en">English</button>
+      </div>
+      <div class="toggle-group theme-toggle t">
+        <button type="button" class="toggle-btn" data-set-theme="light" aria-label="Light theme">☀</button>
+        <button type="button" class="toggle-btn" data-set-theme="dark" aria-label="Dark theme">☾</button>
+      </div>
+    </div>
+  </header>
 
-  <div class="actions">
-    <a class="button" href="https://github.com/l4l4dev/FirnPlanner/releases/latest">最新版をダウンロード</a>
-    <a class="button secondary" href="https://github.com/l4l4dev/FirnPlanner/issues">不具合報告・要望</a>
+  <div class="copy">
+
+    <section class="hero">
+      <div class="hero-copy">
+        <h1>
+          <span lang="ja">今日の​予定を、​
+一枚の​テキストに。</span><span lang="en">Your day,
+on a single page of text.</span>
+        </h1>
+        <p class="hero-lede">
+          <span lang="ja">FirnPlanner は​ 1日1ファイルの​ Markdown で​予定と​実績を​書く​ macOS の​デイリープランナーです。​チェックボックスの​行を​書くと、​その​瞬間に​タイムラインへ​置かれます。</span><span lang="en">FirnPlanner is a daily planner for macOS that keeps each day in one Markdown file. Type a checkbox line and it lands on the timeline the moment you write it.</span>
+        </p>
+        <div class="hero-actions">
+          <a class="btn-primary t" href="https://github.com/l4l4dev/FirnPlanner/releases/latest/download/FirnPlanner.dmg">
+            <span lang="ja">最新版を​ダウンロード</span><span lang="en">Download latest</span>
+          </a>
+          <a class="btn-link" href="https://github.com/l4l4dev/FirnPlanner">
+            <span lang="ja">GitHub で​見る</span><span lang="en">View on GitHub</span>
+          </a>
+        </div>
+        <p class="hero-meta">
+          <span lang="ja">macOS 26 以降​ · β版 · 無料</span><span lang="en">macOS 26 or later · Beta · Free</span>
+        </p>
+      </div>
+
+      <div class="mock-window-wrap">
+        <div class="mock-window t">
+          <div class="mock-titlebar t"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span></div>
+          <div class="mock-body">
+            <div class="mock-sidebar t"><i class="on"></i><i></i><i></i><i></i></div>
+            <div class="mock-editor">
+              <div class="mock-editor-head">
+                <span><span lang="ja">8月26日 (水)</span><span lang="en">Wed, Aug 26</span></span>
+                <span><span lang="ja">提案書を​出す</span><span lang="en">Send the proposal</span></span>
+              </div>
+              <div class="mock-editor-tag"><span lang="ja">#仕事 #家</span><span lang="en">#work #home</span></div>
+              <div class="mock-line done"><span class="mock-checkbox checked"></span><span lang="ja">朝の​メール</span><span lang="en">Morning email</span></div>
+              <div class="mock-line"><span class="mock-checkbox"></span><span lang="ja">提案書の​たたき台</span><span lang="en">Proposal draft</span> <span class="at">@10:00</span></div>
+              <div class="mock-line"><span class="mock-checkbox"></span><span lang="ja">山田さんと​ 1on1</span><span lang="en">1on1 with Yamada</span></div>
+              <div class="mock-line cont"><span lang="ja">議題: 来期の​担当</span><span lang="en">Agenda: next term</span></div>
+              <div class="mock-line"><span class="mock-checkbox"></span><span lang="ja">買い物</span><span lang="en">Groceries</span></div>
+              <div class="mock-line note"><span lang="ja">夕方は​集中が​切れる。​短い​ものを​後ろに</span><span lang="en">Focus drops in the afternoon. Short tasks last.</span></div>
+              <div class="mock-line"><span class="mock-checkbox"></span><span lang="ja">ジム</span><span lang="en">Gym</span></div>
+            </div>
+            <div class="mock-timeline t">
+              <div class="mock-hour" style="top:8px;">09:00</div>
+              <div class="mock-hour" style="top:80px;">10:00</div>
+              <div class="mock-hour" style="top:152px;">11:00</div>
+              <div class="mock-hour" style="top:224px;">12:00</div>
+              <div class="mock-hour" style="top:296px;">13:00</div>
+              <div class="mock-event t" style="top:100px;height:60px;"><span lang="ja">定例</span><span lang="en">Standup</span></div>
+              <div class="mock-block done" style="top:12px;height:40px;"><span lang="ja">朝の​メール</span><span lang="en">Morning email</span></div>
+              <div class="mock-block" style="top:84px;height:64px;"><span lang="ja">提案書の​たたき台</span><span lang="en">Proposal draft</span></div>
+              <div class="mock-block" style="top:156px;height:44px;"><span lang="ja">山田さんと​ 1on1</span><span lang="en">1on1 with Yamada</span></div>
+              <div class="mock-block" style="top:228px;height:30px;"><span lang="ja">買い物</span><span lang="en">Groceries</span></div>
+              <div class="mock-block" style="top:300px;height:44px;"><span lang="ja">ジム</span><span lang="en">Gym</span></div>
+              <div class="mock-now" style="top:118px;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features t">
+      <div class="feature">
+        <div class="feature-bar" style="background:var(--amber);"></div>
+        <div>
+          <div class="feature-title"><span lang="ja">1日1ファイルの​ Markdown</span><span lang="en">One Markdown file per day</span></div>
+          <div class="feature-desc"><span lang="ja">Daily/2026/08/2026-08-26.md のように、​日付ごとに​ 1 枚。​他の​エディタや​ AI からも、​そのまま​読み​書きできます。</span><span lang="en">Daily/2026/08/2026-08-26.md, one page per date. Read and write it from any editor, or from an AI.</span></div>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-bar" style="background:#1E2D4D;"></div>
+        <div>
+          <div class="feature-title"><span lang="ja">タイムラインの​自動配置</span><span lang="en">Auto-placed timeline</span></div>
+          <div class="feature-desc"><span lang="ja">時刻を​打つ​代わりに、​書いた​順に​置かれます。​固定したい​行だけ @09:30。​長さは​ドラッグで。</span><span lang="en">No time entry. Tasks take the next slot in the order you write them. Pin a line with @09:30, resize by dragging.</span></div>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-bar" style="background:var(--blue);"></div>
+        <div>
+          <div class="feature-title"><span lang="ja">Google カレンダー</span><span lang="en">Google Calendar</span></div>
+          <div class="feature-desc"><span lang="ja">予定を​読み取り専用で​横に​並べ、​タスクは​予定を​避けて​置かれます。​オフラインでも​最後の​取得分で​動きます。</span><span lang="en">Events appear read-only in a side lane, and tasks route around them. Works offline with the last fetch.</span></div>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-bar" style="background:var(--sub);"></div>
+        <div>
+          <div class="feature-title"><span lang="ja">1日の​締め</span><span lang="en">Close the day</span></div>
+          <div class="feature-desc"><span lang="ja">未完了を​翌日や​ Inbox へ​送り、​振り返りを​書いて​閉じる。​YWT・Good & New・4行日記など​ 7 つの型。</span><span lang="en">Forward what is left to tomorrow or Inbox, write a short reflection, and close. Seven templates, including YWT, Good &amp; New, and the 4-line diary.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="split">
+      <div class="split-col">
+        <div class="split-caption"><span lang="ja">1日の​締め</span><span lang="en">Close the day</span></div>
+        <div class="sheet-mock t">
+          <div class="sheet-title"><span lang="ja">今日を​締める</span><span lang="en">Close the day</span></div>
+          <div class="sheet-section"><span lang="ja">未完了 2 件</span><span lang="en">2 unfinished</span></div>
+          <div class="sheet-row">
+            <span class="mock-checkbox"></span>
+            <span><span lang="ja">買い物</span><span lang="en">Groceries</span></span>
+            <span class="spacer"></span>
+            <span class="chip t"><span lang="ja">→ 明日</span><span lang="en">→ Tomorrow</span></span>
+          </div>
+          <div class="sheet-row">
+            <span class="mock-checkbox"></span>
+            <span><span lang="ja">ジム</span><span lang="en">Gym</span></span>
+            <span class="spacer"></span>
+            <span class="chip t">Inbox</span>
+          </div>
+          <div class="sheet-divider"></div>
+          <div class="sheet-section"><span lang="ja">よかった​こと</span><span lang="en">Good</span></div>
+          <div class="note-line">–<b><span lang="ja">提案書の​骨組みが​ 1 回で​通った</span><span lang="en">Proposal outline passed on the first try</span></b></div>
+          <div class="sheet-section"><span lang="ja">新しい​気づき</span><span lang="en">New</span></div>
+          <div class="note-line">–<b><span lang="ja">午後の​ 1on1 は​ 15 分で​足りる</span><span lang="en">Afternoon 1on1s fit in 15 minutes</span></b></div>
+          <div class="sheet-footer"><span class="sheet-btn t"><span lang="ja">今日を​締める</span><span lang="en">Close the day</span></span></div>
+        </div>
+      </div>
+
+      <div class="split-col">
+        <div class="split-caption mono">Daily/2026/08/2026-08-26.md</div>
+        <div class="md-mock t">
+          <div class="md-dim">---</div>
+          <div class="md-dim">goal: <span lang="ja">提案書を​出す</span><span lang="en">Send the proposal</span></div>
+          <div class="md-dim">tags: <span lang="ja">#仕事 #家</span><span lang="en">#work #home</span></div>
+          <div class="md-dim">---</div>
+          <div>- [x] <span lang="ja">朝の​メール</span><span lang="en">Morning email</span></div>
+          <div>- [ ] <span lang="ja">提案書の​たたき台</span><span lang="en">Proposal draft</span> @10:00</div>
+          <div>- [ ] <span lang="ja">山田さんと​ 1on1</span><span lang="en">1on1 with Yamada</span></div>
+          <div>&nbsp;&nbsp;<span lang="ja">議題: 来期の​担当</span><span lang="en">Agenda: next term</span></div>
+          <div>- [&gt;] <span lang="ja">買い物</span><span lang="en">Groceries</span> → 2026-08-27</div>
+          <div class="md-dim"><span lang="ja">夕方は​集中が​切れる。​短い​ものを​後ろに</span><span lang="en">Focus drops in the afternoon. Short tasks last.</span></div>
+          <div>- [ ] <span lang="ja">ジム</span><span lang="en">Gym</span></div>
+          <div class="md-dim">---</div>
+          <div class="md-dim">## <span lang="ja">振り返り</span><span lang="en">Reflection</span></div>
+          <div class="md-dim">### <span lang="ja">よかった​こと</span><span lang="en">Good</span></div>
+          <div>- <span lang="ja">提案書の​骨組みが​ 1 回で​通った</span><span lang="en">Proposal outline passed on the first try</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="beta-box t">
+      <h2><span lang="ja">β版に​ついて</span><span lang="en">About the beta</span></h2>
+      <p><span lang="ja">配布中の​ビルドは​ Apple の​公証を​受けていません。​初回起動で​「開発元を​確認できないため開けません」と​出たら、​システム設定 › プライバシーと​セキュリティ の​下に​ある​「このまま​開く」を​押してください。​Finder で​右クリック › 開く​ でも​開けます。</span><span lang="en">This build is not notarized by Apple. If macOS says the app cannot be opened because the developer cannot be verified, open System Settings › Privacy &amp; Security and click &quot;Open Anyway&quot;. Right-click › Open in Finder also works.</span></p>
+      <p><span lang="ja">不具合・要望は​ GitHub の​ Issues へ。</span><span lang="en">Bugs and requests go to GitHub Issues.</span></p>
+    </section>
+
+    <footer class="site-footer t">
+      <span>© 2026 l4l4dev</span>
+      <span>
+        <a href="privacy.html"><span lang="ja">プライバシーポリシー</span><span lang="en">Privacy policy</span></a>
+        · <a href="https://github.com/l4l4dev/FirnPlanner/issues">Issues</a>
+        · <a href="https://github.com/l4l4dev/FirnPlanner/releases">Releases</a>
+      </span>
+    </footer>
+
   </div>
-
-  <div class="notice">
-    <h2>β版について (重要)</h2>
-    <p>現在配布しているビルドは Apple の公証 (notarization) を受けていません。そのため、初回起動時に macOS の Gatekeeper が「"FirnPlanner" は開発元を確認できないため開けません」のような警告を出してアプリを開けないことがあります。これは既知の状態で、以下の手順で開けます。</p>
-    <ol>
-      <li>一度、警告のダイアログを閉じる</li>
-      <li>「システム設定」→「プライバシーとセキュリティ」を開く</li>
-      <li>下の方にある「このまま開く」ボタンをクリックする</li>
-    </ol>
-    <p>または、Finder でアプリを右クリック (もしくは Control キーを押しながらクリック) →「開く」を選ぶ方法でも開けます。</p>
-  </div>
-
-  <footer>
-    <p><a href="privacy.html">プライバシーポリシー</a> &middot; <a href="https://github.com/l4l4dev/FirnPlanner/issues">Issues</a></p>
-  </footer>
-</main>
+</div>
 </body>
 </html>

@@ -119,7 +119,7 @@ a:hover { color: var(--amber-text); }
   text-decoration: none;
 }
 
-.brand-mark { display: block; border-radius: 50%; }
+.brand-mark { display: block; border-radius: 50%; box-shadow: 0 0 0 1px var(--border); }
 
 .brand-name {
   font-size: 20px;
@@ -213,7 +213,16 @@ a:hover { color: var(--amber-text); }
   text-decoration: none;
 }
 
-.btn-link { font-size: 14px; }
+.btn-secondary {
+  background: transparent;
+  color: var(--text);
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  font-size: 15px;
+  text-decoration: none;
+}
 
 .hero-meta {
   margin: 0;

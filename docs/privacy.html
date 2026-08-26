@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>プライバシーポリシー - FirnPlanner</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>FirnPlanner プライバシーポリシー</h1>
+  <p class="lede">最終更新: 2026-08-26</p>
+
+  <p>FirnPlanner は macOS 上で動くデイリープランナーです。あなたが書いた予定・タスク・振り返りは、あなたが選んだフォルダの Markdown ファイルとして、あなたの Mac にだけ保存されます。開発者のサーバーはありません。</p>
+
+  <h2>通信が発生する場合</h2>
+  <p>通信が発生するのは次の2つだけです。</p>
+  <ol>
+    <li>
+      <strong>Google カレンダー連携をオンにしてログインした場合</strong>: Google カレンダーの予定を読み取り専用 (スコープ <code>calendar.readonly</code>) で取得し、タイムラインに表示します。取得した予定は表示とオフライン時のキャッシュのためにあなたの Mac 内に保存され、外部には送りません。ログイン情報 (トークン) は Google Sign-In SDK が macOS のキーチェーンに保存します。設定からログアウトすると消えます。
+    </li>
+    <li>
+      <strong>Markdown に画像の URL を貼り付けた場合</strong>: その画像を1回ダウンロードして、あなたの Mac 内に取り込みます。
+    </li>
+  </ol>
+
+  <h2>Google のユーザーデータの取り扱い</h2>
+  <p>Google のユーザーデータの利用は、<a href="https://developers.google.com/terms/api-services-user-data-policy">Google API サービスのユーザーデータに関するポリシー</a> (制限付き使用の要件を含む) に従います。カレンダーのデータを第三者に提供したり、広告に使ったり、アプリの機能以外に使うことはありません。</p>
+
+  <h2>解析・トラッキング</h2>
+  <p>現在は使用していません。将来、配布ページ (このサイト) にアクセス解析を入れる場合は、このページで告知します。</p>
+
+  <h2>データの削除</h2>
+  <p>ファイルはあなたのフォルダにあるので、削除はあなたが行えます。Google との接続解除は、アプリの設定からのログアウト、または Google アカウントの「サードパーティのアクセス」から取り消せます。</p>
+
+  <h2>連絡先</h2>
+  <p><a href="https://github.com/l4l4dev/FirnPlanner/issues">GitHub の Issues</a> からお知らせください。</p>
+
+  <footer>
+    <p><a href="index.html">FirnPlanner トップへ戻る</a></p>
+  </footer>
+</main>
+</body>
+</html>

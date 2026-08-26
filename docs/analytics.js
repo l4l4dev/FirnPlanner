@@ -1,5 +1,5 @@
 // FirnPlanner 配布サイトのアクセス解析 (Google アナリティクス 4)。
-// - Cookie は使わない: gtag('config', ...) より前に同意モードの既定を denied にする
+// - Cookie は使わない: gtag('config', ...) に client_storage: 'none' を渡す
 // - 測定 ID はこのファイルのこの 1 か所だけに書く (公開される値なので秘密ではない)
 // - 見るもの: ページビュー、「最新版をダウンロード」「不具合報告・要望」のクリック、言語・テーマ切替
 (function () {
@@ -13,15 +13,18 @@
   }
   window.gtag = gtag;
 
-  // Cookie を置かないための同意モード既定。config より前に呼ぶ。
+  // 広告系の保存は使わない (同意モード既定 denied)。analytics_storage は denied に
+  // **しない** — denied にすると gtag は「モデリング用の ping」しか送らず、規模の小さい
+  // サイトではレポートにもリアルタイムにも一切出ない (1 日 1000 イベント × 7 日が閾値)。
   gtag("consent", "default", {
-    analytics_storage: "denied",
     ad_storage: "denied",
     ad_user_data: "denied",
     ad_personalization: "denied"
   });
   gtag("js", new Date());
-  gtag("config", MEASUREMENT_ID, { anonymize_ip: true });
+  // Cookie を使わないのは client_storage: "none" で実現する。gtag は Cookie を作らず、
+  // ページ読み込みごとに匿名の ID を使う。失うのは「同じ人が戻ってきたか」だけ。
+  gtag("config", MEASUREMENT_ID, { client_storage: "none", anonymize_ip: true });
 
   var script = document.createElement("script");
   script.async = true;

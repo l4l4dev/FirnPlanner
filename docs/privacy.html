@@ -59,7 +59,7 @@
       <h1><span lang="ja">FirnPlanner プライバシーポリシー</span><span lang="en">FirnPlanner Privacy Policy</span></h1>
       <!-- 以下、日本語の文言は budoux -H で前処理済み (文節ごとに U+200B) -->
 
-      <p class="lede"><span lang="ja">最終更新: 2026-08-26</span><span lang="en">Last updated: 2026-08-26</span></p>
+      <p class="lede"><span lang="ja">最終更新: 2026-08-27</span><span lang="en">Last updated: 2026-08-27</span></p>
 
       <p>
         <span lang="ja">FirnPlanner は​ macOS 上で​動く​デイリープランナーです。​あなたが​書いた​予定・タスク・ふりかえりは、​あなたが​選んだ​フォルダの​ Markdown ファイルと​して、​あなたの​ Mac にだけ保存されます。​開発者の​サーバーは​ありません。</span>
@@ -67,7 +67,7 @@
       </p>
 
       <h2><span lang="ja">通信が​発生する​場合</span><span lang="en">When network communication occurs</span></h2>
-      <p><span lang="ja">通信が​発生するのは​次の​2つだけです。</span><span lang="en">There are only two cases where FirnPlanner communicates over the network.</span></p>
+      <p><span lang="ja">通信が​発生するのは​次の​4つだけです。</span><span lang="en">There are only four cases where FirnPlanner communicates over the network.</span></p>
       <ol>
         <li>
           <span lang="ja"><strong>Google カレンダー連携を​オンに​して​ログインした​場合</strong>: Google カレンダーの​予定を​読み取り専用 (スコープ <code>calendar.readonly</code>) で​取得し、​タイムラインに​表示します。​取得した​予定は​表示と​オフライン時の​キャッシュの​ために​あなたの​ Mac 内に​保存され、​外部には​送りません。​ログイン情報 (トークン) は​ Google Sign-In SDK が​ macOS の​キーチェーンに​保存します。​設定から​ログアウトすると​消えます。</span>
@@ -76,6 +76,14 @@
         <li>
           <span lang="ja"><strong>Markdown に​画像の​ URL を​貼り付けた​場合</strong>: ​その​画像を​1回ダウンロードして、​あなたの​ Mac 内に​取り込みます。</span>
           <span lang="en"><strong>When you paste an image URL into Markdown</strong>: FirnPlanner downloads that image once and stores it on your Mac.</span>
+        </li>
+        <li>
+          <span lang="ja"><strong>新しい​版の​確認</strong>: 起動時と​1日に​1回、​GitHub 上の​更新情報 (appcast.xml) を​取得し、​新しい​版が​あれば​案内します。​入れ替えの​ときは​ GitHub Releases から​ dmg を​ダウンロードします。​あなたの​ Mac の​情報や​ファイルの​内容は​送りません。</span>
+          <span lang="en"><strong>Checking for updates</strong>: On launch and once a day, FirnPlanner fetches the update feed (appcast.xml) from GitHub and offers new versions. When updating, it downloads the dmg from GitHub Releases. No information about your Mac or your files is sent.</span>
+        </li>
+        <li>
+          <span lang="ja"><strong>匿名の​使用状況の​送信 (ベータ版)</strong>: アプリの​改善の​ために、​Google アナリティクス (Firebase Analytics) へ​次の​回数だけを​送ります: 起動、​1日の​締め、​Inbox から​日付へ​送る、​繰り返しの​登録、​スニペットの​差し込み。​タスクの​タイトル・本文・ファイル名・保存先など、​あなたが​書いた​内容は​一切​送りません。​設定「ファイル」の​「使用状況を​送信する」を​オフに​すると​止まります (既定は​オン)。</span>
+          <span lang="en"><strong>Anonymous usage statistics (beta)</strong>: To improve the app, FirnPlanner sends only event counts to Google Analytics (Firebase Analytics): app launches, closing a day, sending an Inbox item to a date, registering a recurring task, and inserting a snippet. It never sends anything you wrote — no task titles, body text, file names, or folder locations. You can stop this at any time by turning off &quot;Send usage statistics&quot; under Settings &gt; Files (on by default).</span>
         </li>
       </ol>
 
@@ -95,8 +103,8 @@
         <span lang="en">It does not use cookies (the tag runs without browser storage). It does not store IP addresses either. The numbers collected are used only to understand how the app is being distributed.</span>
       </p>
       <p>
-        <span lang="ja">アプリ本体 (FirnPlanner.app) は、​この​節とは​別で、​今も​何も​送信しません。</span>
-        <span lang="en">The app itself (FirnPlanner.app) is separate from this and still sends nothing.</span>
+        <span lang="ja">アプリ本体 (FirnPlanner.app) が​送る​ものは、​上の​「通信が​発生する​場合」の​4番目に​書いた​匿名の​使用状況の​回数だけです。​こちらも​ Google アナリティクスへ​送られ、​設定で​止められます。</span>
+        <span lang="en">The app itself (FirnPlanner.app) sends only the anonymous usage counts described in item 4 of &quot;When network communication occurs&quot; above. These also go to Google Analytics, and can be turned off in Settings.</span>
       </p>
       <p>
         <span lang="ja">詳しくは​<a href="https://policies.google.com/privacy">Google のプライバシーポリシー</a>を​ご覧ください。</span>

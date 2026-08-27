@@ -1,0 +1,32 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>FirnPlanner</title>
+        <item>
+            <title>0.1.0-beta.2</title>
+            <pubDate>Thu, 27 Aug 2026 17:35:02 +0900</pubDate>
+            <sparkle:version>1322</sparkle:version>
+            <sparkle:shortVersionString>0.1.0-beta.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<h3>変更点</h3>
+<ul>
+  <li>アプリの中で自動アップデートできるようになりました。次の版からは、dmg をダウンロードし直さなくても、アプリが更新を知らせて入れ替えます</li>
+  <li>繰り返しのタスクを登録できるようになりました。サイドバーの「繰り返し」から毎日・毎週 (曜日)・毎月 (日) を選んで登録すると、その日を開いたときに本文へ足されます。本文のタスク行を右クリックして「繰り返しにする…」でも登録できます</li>
+  <li>新しい日の骨組みを、複数のテンプレートから選べるようになりました。保存先の `Templates/` フォルダに .md を置き、設定「ファイル」で 1 つを選びます</li>
+  <li>スニペット (よく使う文の断片) を本文へ差し込めるようになりました。保存先の `Snippets/` フォルダに .md を置くと、右クリックとツールバーから差し込めます</li>
+  <li>本文の先頭にある日付見出しの表記を、設定で自由に決められるようになりました (曜日・月を英語にもできます)</li>
+  <li>早く終わった分の表示 (余白の色と +Nm のラベル) を設定でオン/オフできるようになりました (既定はオフ)</li>
+  <li>1日の締めのシートで、スクロールバーが右端の文字に重ならないようにしました</li>
+  <li>ふりかえりの型の説明を、設定と締めのシートの「?」から読めるようにしました</li>
+  <li>「振り返り」の表記を「ふりかえり」に統一しました (ファイル内の見出しも新しい表記で書かれます。以前の表記のファイルもそのまま読めます)</li>
+  <li>締めで、同じ名前のタスクが複数あるときに完了の時刻が別の行に付くことがある不具合を直しました</li>
+  <li>スニペットのファイル名の拡張子が大文字 (.MD) だと一覧に出るのに読めない不具合を直しました</li>
+  <li>設定の群「保存先」を「ファイル」に改名し、説明文をパスの直下に移しました</li>
+  <li>設定画面の左下にアプリのバージョンを表示するようにしました</li>
+  <li>ベータ版の改善のため、匿名の使用状況 (起動と、締め・Inbox から送る・繰り返しの登録・スニペットの差し込みの回数) を Google Analytics へ送るようにしました。タスクの内容やファイル名は送りません。設定「ファイル」の「使用状況を送信する」でいつでも止められます</li>
+</ul>
+]]></description>
+            <enclosure url="https://github.com/l4l4dev/FirnPlanner/releases/download/v0.1.0-beta.2/FirnPlanner-0.1.0-beta.2.dmg" length="9900558" type="application/octet-stream" sparkle:edSignature="OaNLoeHhgplFv7XHw7KpQKKQeVKuuP/4xFBYEeZdpMFIDRWEPoqQ5zvCqUlIuioXWtox9/madnsEEjOcgg+IAg=="/>
+        </item>
+    </channel>
+</rss>

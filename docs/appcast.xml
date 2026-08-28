@@ -3,6 +3,20 @@
     <channel>
         <title>FirnPlanner</title>
         <item>
+            <title>0.1.0-beta.5</title>
+            <pubDate>Fri, 28 Aug 2026 23:58:21 +0900</pubDate>
+            <sparkle:version>1518</sparkle:version>
+            <sparkle:shortVersionString>0.1.0-beta.5</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<h3>変更点</h3>
+<ul>
+  <li>公開サイトを独自ドメイン https://firnplanner.l4l4.dev/ に移しました。自動アップデートの確認先もこのドメインになります。旧アドレス (l4l4dev.github.io/FirnPlanner) は新しいドメインへ転送されるので、beta.4 までをお使いの方もそのまま更新できます</li>
+  <li>設定の「プライバシーポリシー」のリンク先を新しいドメインにしました</li>
+</ul>
+]]></description>
+            <enclosure url="https://github.com/l4l4dev/FirnPlanner/releases/download/v0.1.0-beta.5/FirnPlanner-0.1.0-beta.5.dmg" length="9990022" type="application/octet-stream" sparkle:edSignature="tf7FznnpbR85Sxvp2XQoW0qCeVM7zp3RU89HFHKhd4XVTOvdvi2ydoM7GrY2Lf/OiA2AkR9jt535r9AaRVRnAg=="/>
+        </item>
+        <item>
             <title>0.1.0-beta.4</title>
             <pubDate>Fri, 28 Aug 2026 23:12:02 +0900</pubDate>
             <sparkle:version>1507</sparkle:version>

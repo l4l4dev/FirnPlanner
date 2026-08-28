@@ -3,6 +3,29 @@
     <channel>
         <title>FirnPlanner</title>
         <item>
+            <title>0.1.0-beta.3</title>
+            <pubDate>Fri, 28 Aug 2026 19:29:37 +0900</pubDate>
+            <sparkle:version>1415</sparkle:version>
+            <sparkle:shortVersionString>0.1.0-beta.3</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<h3>変更点</h3>
+<ul>
+  <li>初回起動の案内画面に「ツアーを開始」を足しました。選ぶと、練習用の1日を開いて「書く → 自動で予定に並ぶ → Inbox へ送る → 1日を締める」の流れを 5 つの吹き出しで案内します。練習の内容はお手元のファイルには書き込まれません。今までどおり始めたいときは「使い始める」を選びます</li>
+  <li>英語表示に対応しました。設定「外観」の言語で日本語 / 英語 / システム設定に従う、を選べます (再起動は要りません)。ファイルに書かれる見出しや記法は言語に関わらず同じなので、切り替えても以前のファイルはそのまま読めます</li>
+  <li>タイムラインの表示レンジの既定を、Working Time (9:00〜18:30) の前後 2 時間 = 7:00〜20:30 にしました。すでに表示レンジを設定している場合は変わりません。表示レンジを触っていない間は、Working Time を変えると表示レンジも追従します</li>
+  <li>日付見出しのゴール欄・タグ欄を既定で隠しました。設定「エディタ」の「見出しにゴールとタグを出す」で戻せます。すでに書き込んである日はそのまま表示されます</li>
+  <li>設定に「アップデートを自動で確認する」のトグルを足しました</li>
+  <li>コードブロックにマウスを乗せるとコピーボタンが出るようになりました。押すと ``` の行を除いた中身だけがクリップボードに入ります</li>
+  <li>コードブロックを複数行選ぶと、選択の色が行ごとにガタついて見える不具合を直しました</li>
+  <li>設定「1日の締め」で、トグル 2 つを上に、ふりかえりの型の一覧を下に並べ替えました</li>
+  <li>設定画面の上部が、マウスを乗せると色が変わってしまう不具合 (macOS 27) を直しました</li>
+  <li>設定画面の区切り線と説明文の余白をそろえました</li>
+  <li>Google ログインの内部の仕組みを入れ替えました。配布版でログインが keychain のエラーで失敗する不具合の対処です。ログインし直しが必要になることがあります</li>
+</ul>
+]]></description>
+            <enclosure url="https://github.com/l4l4dev/FirnPlanner/releases/download/v0.1.0-beta.3/FirnPlanner-0.1.0-beta.3.dmg" length="9922235" type="application/octet-stream" sparkle:edSignature="VKZFNYid4pLC23FEMzbfdLQuvyqv04p06bywAdYvuC1YnXFPkpz4aOwzoeOtdtLQatGP1SNrPfodwG12w94vDQ=="/>
+        </item>
+        <item>
             <title>0.1.0-beta.2</title>
             <pubDate>Thu, 27 Aug 2026 17:35:02 +0900</pubDate>
             <sparkle:version>1322</sparkle:version>

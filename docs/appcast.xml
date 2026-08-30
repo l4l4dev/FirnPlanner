@@ -3,6 +3,21 @@
     <channel>
         <title>FirnPlanner</title>
         <item>
+            <title>0.1.0-beta.6</title>
+            <pubDate>Sun, 30 Aug 2026 22:11:07 +0900</pubDate>
+            <sparkle:version>1629</sparkle:version>
+            <sparkle:shortVersionString>0.1.0-beta.6</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<h3>変更点</h3>
+<ul>
+  <li>Google カレンダー連携からログアウトすると、ログイン情報と、この Mac に取り込んでいた予定のキャッシュを削除し、Google 側のアクセス権も取り消すようにしました。プライバシーポリシー (https://firnplanner.l4l4.dev/privacy.html) の「Google ユーザーデータの取り扱い」に書いてある内容と同じ動きです</li>
+  <li>ログアウト時にログイン情報やキャッシュを消せなかった場合、黙って済ませずに設定画面で知らせるようにしました</li>
+  <li>予定の取得中にログアウトしても、取得し終えた予定が後から書き戻されないようにしました</li>
+</ul>
+]]></description>
+            <enclosure url="https://github.com/l4l4dev/FirnPlanner/releases/download/v0.1.0-beta.6/FirnPlanner-0.1.0-beta.6.dmg" length="10292755" type="application/octet-stream" sparkle:edSignature="D9k3vG9ia5pNAMjddkefKjWXdQUNU0urQyRbwDdMzT6CMODwnL/dNOLVFd2z3tVzONLxdyufmWMkc+YStW1GDw=="/>
+        </item>
+        <item>
             <title>0.1.0-beta.5</title>
             <pubDate>Fri, 28 Aug 2026 23:58:21 +0900</pubDate>
             <sparkle:version>1518</sparkle:version>

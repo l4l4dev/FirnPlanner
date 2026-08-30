@@ -59,7 +59,7 @@
       <h1><span lang="ja">FirnPlanner プライバシーポリシー</span><span lang="en">FirnPlanner Privacy Policy</span></h1>
       <!-- 以下、日本語の文言は budoux -H で前処理済み (文節ごとに U+200B) -->
 
-      <p class="lede"><span lang="ja">最終更新: 2026-08-27</span><span lang="en">Last updated: 2026-08-27</span></p>
+      <p class="lede"><span lang="ja">最終更新: 2026-08-30</span><span lang="en">Last updated: 2026-08-30</span></p>
 
       <p>
         <span lang="ja">FirnPlanner は​ macOS 上で​動く​デイリープランナーです。​あなたが​書いた​予定・タスク・ふりかえりは、​あなたが​選んだ​フォルダの​ Markdown ファイルと​して、​あなたの​ Mac にだけ保存されます。​開発者の​サーバーは​ありません。</span>
@@ -70,8 +70,8 @@
       <p><span lang="ja">通信が​発生するのは​次の​4つだけです。</span><span lang="en">There are only four cases where FirnPlanner communicates over the network.</span></p>
       <ol>
         <li>
-          <span lang="ja"><strong>Google カレンダー連携を​オンに​して​ログインした​場合</strong>: Google カレンダーの​予定を​読み取り専用 (スコープ <code>calendar.readonly</code>) で​取得し、​タイムラインに​表示します。​取得した​予定は​表示と​オフライン時の​キャッシュの​ために​あなたの​ Mac 内に​保存され、​外部には​送りません。​ログイン情報 (トークン) は​ Google Sign-In SDK が​ macOS の​キーチェーンに​保存します。​設定から​ログアウトすると​消えます。</span>
-          <span lang="en"><strong>When you turn on Google Calendar integration and sign in</strong>: FirnPlanner fetches your Google Calendar events read-only (scope <code>calendar.readonly</code>) and shows them on the timeline. The fetched events are stored on your Mac only, for display and offline caching, and are never sent anywhere else. Your sign-in credentials (token) are stored in the macOS Keychain by the Google Sign-In SDK, and are removed when you sign out from Settings.</span>
+          <span lang="ja"><strong>Google カレンダー連携を​オンに​して​ログインした​場合</strong>: Google カレンダーの​予定を​読み取り専用 (スコープ <code>calendar.readonly</code>) で​取得し、​タイムラインに​表示します。​取得した​予定は​表示と​オフライン時の​キャッシュの​ために​あなたの​ Mac 内に​保存され、​外部には​送りません。​ログイン情報 (トークン) は​ Google Sign-In SDK が​ macOS の​キーチェーンに​保存します。​設定から​ログアウトすると、​ログイン情報と​キャッシュを​削除し、​Google 側の​アクセス権も​取り消します。</span>
+          <span lang="en"><strong>When you turn on Google Calendar integration and sign in</strong>: FirnPlanner fetches your Google Calendar events read-only (scope <code>calendar.readonly</code>) and shows them on the timeline. The fetched events are stored on your Mac only, for display and offline caching, and are never sent anywhere else. Your sign-in credentials (token) are stored in the macOS Keychain by the Google Sign-In SDK. Signing out from Settings removes the credentials and the cached events, and revokes access on Google's side.</span>
         </li>
         <li>
           <span lang="ja"><strong>Markdown に​画像の​ URL を​貼り付けた​場合</strong>: ​その​画像を​1回ダウンロードして、​あなたの​ Mac 内に​取り込みます。</span>
@@ -87,10 +87,68 @@
         </li>
       </ol>
 
-      <h2><span lang="ja">Google の​ユーザーデータの​取り扱い</span><span lang="en">Handling of Google user data</span></h2>
+      <h2><span lang="ja">Google ユーザーデータの​取り扱い</span><span lang="en">How FirnPlanner handles Google user data</span></h2>
+
+      <h3><span lang="ja">取得する​データ</span><span lang="en">Data we access</span></h3>
       <p>
-        <span lang="ja">Google の​ユーザーデータの​利用は、<a href="https://developers.google.com/terms/api-services-user-data-policy">​Google API サービスの​ユーザーデータに​関する​ポリシー</a> (制限付き​使用の​要件を​含む) に​従います。​カレンダーの​データを​第三者に​提供したり、​広告に​使ったり、​アプリの​機能以外に​使う​ことは​ありません。</span>
-        <span lang="en">FirnPlanner's use of Google user data complies with the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements. Calendar data is never shared with third parties, used for advertising, or used for anything beyond the app's own features.</span>
+        <span lang="ja">Google カレンダー連携を​オンに​して​ログインすると、​次の​データを​ Google から​読み取り専用で​取得します。</span>
+        <span lang="en">When you turn on Google Calendar integration and sign in, FirnPlanner reads the following data from Google, read-only.</span>
+      </p>
+      <ul>
+        <li>
+          <span lang="ja">アカウントの​メールアドレス (スコープ <code>openid</code>, <code>email</code>)</span>
+          <span lang="en">Your account email address (scope <code>openid</code>, <code>email</code>)</span>
+        </li>
+        <li>
+          <span lang="ja">カレンダーの​一覧 (名前と​ ID)</span>
+          <span lang="en">The list of your calendars (name and ID)</span>
+        </li>
+        <li>
+          <span lang="ja">予定の​ ID、​タイトル、​開始・終了日時、​終日か​どうか (スコープ <code>calendar.readonly</code>)</span>
+          <span lang="en">Event ID, title, start/end time, and whether it is all-day (scope <code>calendar.readonly</code>)</span>
+        </li>
+      </ul>
+      <p>
+        <span lang="ja">参加者、​場所、​説明文など、​これ以外の​項目は​取得も​保存もしません。</span>
+        <span lang="en">FirnPlanner does not access or store anything else, such as attendees, location, or the event description.</span>
+      </p>
+
+      <h3><span lang="ja">使い道</span><span lang="en">How we use it</span></h3>
+      <p>
+        <span lang="ja">メールアドレスは、​設定画面に​ログイン中の​アカウントを​表示する​ためと、​予定の​キャッシュを​アカウントごとに​分ける​ためにだけ​使います。​カレンダーと​予定は、​その​日の​タイムラインに​表示する​ためにだけ​使います。​予定の​作成・変更・削除は​行いません。</span>
+        <span lang="en">The email address is used only to show which account is signed in on the Settings screen, and to keep the cached events separate per account. Calendars and events are used only to display them on the day's timeline. FirnPlanner never creates, changes, or deletes your events.</span>
+      </p>
+
+      <h3><span lang="ja">保存場所と​保護</span><span lang="en">Where data is stored and how it is protected</span></h3>
+      <ul>
+        <li>
+          <span lang="ja">Google との​通信は​すべて​ HTTPS (TLS) で​暗号化されます。</span>
+          <span lang="en">All communication with Google is encrypted with HTTPS (TLS).</span>
+        </li>
+        <li>
+          <span lang="ja">ログイン情報 (アクセストークンと​リフレッシュトークン) は​ macOS の​キーチェーンに​保存され、​OS に​よって​暗号化されます。</span>
+          <span lang="en">Your sign-in credentials (access token and refresh token) are stored in the macOS Keychain, where the OS encrypts them.</span>
+        </li>
+        <li>
+          <span lang="ja">取得した​予定は、​オフライン時の​表示の​ために、​あなたの​ Mac の​ <code>~/Library/Application Support/FirnPlanner/</code> 内に​保存します。​ファイル名は​アカウントと​カレンダーを​ハッシュ化した​もので、​ファイル名から​誰の​カレンダーかは​分かりません。</span>
+          <span lang="en">Fetched events are cached in <code>~/Library/Application Support/FirnPlanner/</code> on your Mac, for display when you are offline. File names are a hash of the account and calendar, so a file name does not reveal whose calendar it belongs to.</span>
+        </li>
+        <li>
+          <span lang="ja">開発者の​サーバーは​なく、​これらの​データが​あなたの​ Mac の​外に​出る​ことは​ありません。</span>
+          <span lang="en">There is no server run by the developer, so none of this data ever leaves your Mac.</span>
+        </li>
+      </ul>
+
+      <h3><span lang="ja">共有</span><span lang="en">Sharing</span></h3>
+      <p>
+        <span lang="ja">Google から​取得した​データを​第三者に​提供したり、​広告に​使ったり、​AI や​機械学習モデルの​学習に​使ったりする​ことは​ありません。​利用は​ <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API サービスの​ユーザーデータに​関する​ポリシー</a> (制限付き​使用の​要件を​含む) に​従います。</span>
+        <span lang="en">Data obtained from Google is never shared with third parties, used for advertising, or used to train AI or machine learning models. This use complies with the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements.</span>
+      </p>
+
+      <h3><span lang="ja">保持と​削除</span><span lang="en">Retention and deletion</span></h3>
+      <p>
+        <span lang="ja">設定から​ログアウトすると、​ログイン情報と​予定の​キャッシュを​あなたの​ Mac から​削除し、​Google 側の​アクセス権も​取り消します。​Google アカウントの​「サードパーティの​アクセス」からも、​いつでも​取り消せます。</span>
+        <span lang="en">Signing out from Settings deletes your credentials and the cached events from your Mac, and revokes access on Google's side. You can also revoke access at any time from the "Third-party access" section of your Google account.</span>
       </p>
 
       <h2><span lang="ja">解析・トラッキング</span><span lang="en">Analytics and tracking</span></h2>

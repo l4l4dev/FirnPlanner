@@ -511,6 +511,13 @@ a:hover { color: var(--amber-text); }
   color: var(--wordmark);
 }
 
+.policy h3 {
+  margin: 20px 0 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--wordmark);
+}
+
 .policy p, .policy li { font-size: 14px; line-height: 1.85; color: var(--text); }
 .policy p { margin: 0 0 14px; }
 .policy ol, .policy ul { margin: 0 0 14px; padding-left: 22px; }

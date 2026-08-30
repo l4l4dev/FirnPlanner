@@ -70,8 +70,8 @@
       <p><span lang="ja">通信が​発生するのは​次の​4つだけです。</span><span lang="en">There are only four cases where FirnPlanner communicates over the network.</span></p>
       <ol>
         <li>
-          <span lang="ja"><strong>Google カレンダー連携を​オンに​して​ログインした​場合</strong>: Google カレンダーの​予定を​読み取り専用 (スコープ <code>calendar.readonly</code>) で​取得し、​タイムラインに​表示します。​取得した​予定は​表示と​オフライン時の​キャッシュの​ために​あなたの​ Mac 内に​保存され、​外部には​送りません。​ログイン情報 (トークン) は​ Google Sign-In SDK が​ macOS の​キーチェーンに​保存します。​設定から​ログアウトすると、​ログイン情報と​キャッシュを​削除し、​Google 側の​アクセス権も​取り消します。</span>
-          <span lang="en"><strong>When you turn on Google Calendar integration and sign in</strong>: FirnPlanner fetches your Google Calendar events read-only (scope <code>calendar.readonly</code>) and shows them on the timeline. The fetched events are stored on your Mac only, for display and offline caching, and are never sent anywhere else. Your sign-in credentials (token) are stored in the macOS Keychain by the Google Sign-In SDK. Signing out from Settings removes the credentials and the cached events, and revokes access on Google's side.</span>
+          <span lang="ja"><strong>Google カレンダー連携を​オンに​して​ログインした​場合</strong>: Google カレンダーの​予定を​読み取り専用 (スコープ <code>calendar.readonly</code>) で​取得し、​タイムラインに​表示します。​取得した​予定は​表示と​オフライン時の​キャッシュの​ために​あなたの​ Mac 内に​保存され、​外部には​送りません。​ログイン情報 (トークン) は​ macOS の​キーチェーンに​保存します。​設定から​ログアウトすると、​ログイン情報と​キャッシュを​削除し、​Google 側の​アクセス権も​取り消します。</span>
+          <span lang="en"><strong>When you turn on Google Calendar integration and sign in</strong>: FirnPlanner fetches your Google Calendar events read-only (scope <code>calendar.readonly</code>) and shows them on the timeline. The fetched events are stored on your Mac only, for display and offline caching, and are never sent anywhere else. Your sign-in credentials (token) are stored in the macOS Keychain. Signing out from Settings removes the credentials and the cached events, and revokes access on Google's side.</span>
         </li>
         <li>
           <span lang="ja"><strong>Markdown に​画像の​ URL を​貼り付けた​場合</strong>: ​その​画像を​1回ダウンロードして、​あなたの​ Mac 内に​取り込みます。</span>

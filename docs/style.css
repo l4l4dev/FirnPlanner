@@ -531,6 +531,52 @@ a:hover { color: var(--amber-text); }
   padding: 1px 5px;
 }
 
+/* ---------- FAQ ページ (docs/faq.html) の質問アコーディオン ---------- */
+.faq-item {
+  border-bottom: 1px solid var(--border);
+}
+.faq-item:first-of-type { border-top: 1px solid var(--border); }
+
+.faq-item summary {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 0;
+  padding: 16px 2px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--wordmark);
+  cursor: pointer;
+  list-style: none; /* Firefox の既定の三角を消す */
+}
+.faq-item summary::-webkit-details-marker { display: none; } /* Safari / Chrome の既定の三角を消す */
+
+.faq-item summary::after {
+  content: "▸";
+  flex: none;
+  font-size: 13px;
+  color: var(--sub);
+}
+.faq-item[open] summary::after { content: "▾"; }
+
+.faq-item summary:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.faq-item .faq-a { padding: 0 2px 20px; }
+.faq-item .faq-a p { margin: 0; font-size: 14px; line-height: 1.85; color: var(--sub); }
+.faq-item .faq-a code {
+  font-family: var(--mono);
+  font-size: 12.5px;
+  background: var(--chrome);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1px 5px;
+}
+
 /* ---------- レスポンシブ: 720px 以下は 1 カラム ---------- */
 @media (max-width: 720px) {
   .page { padding: 0 20px 40px; }

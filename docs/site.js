@@ -78,6 +78,20 @@
     applyTheme(theme);
   }
 
+  // FAQ ページ (docs/faq.html) の <details id="q..."> を URL のハッシュ
+  // (#q-storage 等) に合わせて開く。ハッシュが details 以外を指すとき・
+  // 対象が無いときは何もしない。
+  function openHashDetails() {
+    var id = window.location.hash.slice(1);
+    if (!id) return;
+    try {
+      var target = document.getElementById(id);
+      if (target && target.tagName === "DETAILS") {
+        target.open = true;
+      }
+    } catch (e) {}
+  }
+
   function init() {
     var storedLang = readStored(LANG_KEY);
     var storedTheme = readStored(THEME_KEY);
@@ -94,6 +108,9 @@
         setTheme(btn.getAttribute("data-set-theme"));
       });
     });
+
+    openHashDetails();
+    window.addEventListener("hashchange", openHashDetails);
   }
 
   if (document.readyState === "loading") {

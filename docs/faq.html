@@ -59,46 +59,54 @@
       <h1><span lang="ja">よくある質問</span><span lang="en">Frequently Asked Questions</span></h1>
 
       <p class="lede">
-        <span lang="ja">よく​ある​質問を​まとめました。​載っていない​ことは​問い合わせ先から​お知らせください。</span><span lang="en">Answers to common questions. If yours isn’t here, please reach out via the contact link below.</span>
+        <span lang="ja">よく​ある​質問を​まとめました。​質問を​押すと​回答が​開きます。​載っていない​ことは​問い合わせ先から​お知らせください。</span><span lang="en">Answers to common questions. Tap a question to open its answer. If yours isn’t here, please reach out via the contact link below.</span>
       </p>
 
-      <ol>
-        <li><a href="#q-storage"><span lang="ja">保存先は​どこですか​? Markdown を​他の​エディタで​開いても​よいですか​?</span><span lang="en">Where are my files stored? Can I open the Markdown files in another editor?</span></a></li>
-        <li><a href="#q-offline"><span lang="ja">オフラインで​使えますか​?</span><span lang="en">Does it work offline?</span></a></li>
-        <li><a href="#q-requirements"><span lang="ja">動作環境は​?</span><span lang="en">What are the system requirements?</span></a></li>
-        <li><a href="#q-undo"><span lang="ja">うっかり消してしまった​内容は​戻せますか​?</span><span lang="en">Can I recover content I accidentally deleted?</span></a></li>
-        <li><a href="#q-contact"><span lang="ja">問い​合わせ先は​?</span><span lang="en">How can I contact you?</span></a></li>
-      </ol>
-
-      <h2 id="q-storage"><span lang="ja">保存先は​どこですか​? Markdown を​他の​エディタで​開いても​よいですか​?</span><span lang="en">Where are my files stored? Can I open the Markdown files in another editor?</span></h2>
-      <p>
-        <span lang="ja">既定の​保存先は​ <code>~/Documents/FirnPlanner</code> です (設定​「ファイル」で​変更できます)。​日ごとの​ファイルは​ <code>Daily/年/月/年-月-日.md</code> (例: <code>Daily/2026/09/2026-09-01.md</code>)、​Inbox は​保存先ルート直下の​ <code>Inbox.md</code>、​繰り返しタスクの​定義は​同じく​ <code>Recurring.md</code> に​保存されます。​どれも​普通の​ Markdown ファイルなので、​他の​テキストエディタや​ AI ツールで​開いて​読み​書きしてかまいません。</span>
-        <span lang="en">By default your files are stored under <code>~/Documents/FirnPlanner</code> (you can change this in Settings &gt; Files). Each day is one file at <code>Daily/YYYY/MM/YYYY-MM-DD.md</code> (e.g. <code>Daily/2026/09/2026-09-01.md</code>), the Inbox is <code>Inbox.md</code> at the root of that folder, and recurring task definitions live in <code>Recurring.md</code>. These are all plain Markdown files, so it is fine to open and edit them with another text editor or an AI tool.</span>
-      </p>
-
-      <h2 id="q-offline"><span lang="ja">オフラインで​使えますか​?</span><span lang="en">Does it work offline?</span></h2>
-      <p>
-        <span lang="ja">はい、​使えます。​FirnPlanner は​ローカルの​ファイルだけで​動き、​開発者の​サーバーは​ありません。​ネットワークを​使うのは​次の​場合だけです: 設定で​ Google カレンダー連携を​オンに​している​ときの​予定の​読み取り、​本文に​貼った​リモート画像の​1回だけの​取り込み、​新しい​版が​ないかの​確認、​匿名の​使用状況の​送信 (内容は​含みません。​詳しくは​<a href="privacy.html">プライバシーポリシー</a>を​ご覧ください)。​これら​以外の​操作に​通信は​発生しません。</span>
-        <span lang="en">Yes. FirnPlanner works entirely with local files, and there is no server run by the developer. The only cases where it uses the network are: reading your events when Google Calendar integration is turned on in Settings, a one-time download when you paste a remote image URL into your notes, checking for a new version, and sending anonymous usage statistics (never the content you write — see the <a href="privacy.html">privacy policy</a> for details). Nothing else touches the network.</span>
-      </p>
-
-      <h2 id="q-requirements"><span lang="ja">動作環境は​?</span><span lang="en">What are the system requirements?</span></h2>
-      <p>
-        <span lang="ja">macOS 26 以降が​必要です。</span>
-        <span lang="en">macOS 26 or later is required.</span>
-      </p>
-
-      <h2 id="q-undo"><span lang="ja">うっかり消してしまった​内容は​戻せますか​?</span><span lang="en">Can I recover content I accidentally deleted?</span></h2>
-      <p>
-        <span lang="ja">アプリ内の​取り消し (⌘Z) は、​その場で​編集していた​範囲に​効きます。​ファイルは​普通の​ Markdown なので、​それより​前の​状態は​ Time Machine などバックアップから、​その​日の​ファイルだけを​取り出して​戻せます。​保存先を​ iCloud Drive や​ Dropbox のような​同期フォルダに​している​場合は、​それぞれの​サービスが​持つバージョン履歴からも​戻せます。</span>
-        <span lang="en">The app’s own Undo (⌘Z) covers the edit you just made in that session. Since your files are plain Markdown, you can also restore an earlier state of a single day’s file from a backup such as Time Machine. If you keep your files in a synced folder like iCloud Drive or Dropbox, that service’s own version history is another way to recover a file.</span>
-      </p>
-
-      <h2 id="q-contact"><span lang="ja">問い​合わせ先は​?</span><span lang="en">How can I contact you?</span></h2>
-      <p>
-        <span lang="ja"><a href="https://github.com/l4l4dev/FirnPlanner/issues">GitHub の​ Issues</a> から​お知らせください。</span>
-        <span lang="en">Please reach out via <a href="https://github.com/l4l4dev/FirnPlanner/issues">GitHub Issues</a>.</span>
-      </p>
+      <details class="faq-item" id="q-storage">
+        <summary><span lang="ja">保存先は​どこですか​? Markdown を​他の​エディタで​開いても​よいですか​?</span><span lang="en">Where are my files stored? Can I open the Markdown files in another editor?</span></summary>
+        <div class="faq-a">
+          <p>
+            <span lang="ja">既定の​保存先は​ <code>~/Documents/FirnPlanner</code> です (設定​「ファイル」で​変更できます)。​日ごとの​ファイルは​ <code>Daily/年/月/年-月-日.md</code> (例: <code>Daily/2026/09/2026-09-01.md</code>)、​Inbox は​保存先ルート直下の​ <code>Inbox.md</code>、​繰り返しタスクの​定義は​同じく​ <code>Recurring.md</code> に​保存されます。​どれも​普通の​ Markdown ファイルなので、​他の​テキストエディタや​ AI ツールで​開いて​読み​書きしてかまいません。</span>
+            <span lang="en">By default your files are stored under <code>~/Documents/FirnPlanner</code> (you can change this in Settings &gt; Files). Each day is one file at <code>Daily/YYYY/MM/YYYY-MM-DD.md</code> (e.g. <code>Daily/2026/09/2026-09-01.md</code>), the Inbox is <code>Inbox.md</code> at the root of that folder, and recurring task definitions live in <code>Recurring.md</code>. These are all plain Markdown files, so it is fine to open and edit them with another text editor or an AI tool.</span>
+          </p>
+        </div>
+      </details>
+      <details class="faq-item" id="q-offline">
+        <summary><span lang="ja">オフラインで​使えますか​?</span><span lang="en">Does it work offline?</span></summary>
+        <div class="faq-a">
+          <p>
+            <span lang="ja">はい、​使えます。​FirnPlanner は​ローカルの​ファイルだけで​動き、​開発者の​サーバーは​ありません。​ネットワークを​使うのは​次の​場合だけです: 設定で​ Google カレンダー連携を​オンに​している​ときの​予定の​読み取り、​本文に​貼った​リモート画像の​1回だけの​取り込み、​新しい​版が​ないかの​確認、​匿名の​使用状況の​送信 (内容は​含みません。​詳しくは​<a href="privacy.html">プライバシーポリシー</a>を​ご覧ください)。​これら​以外の​操作に​通信は​発生しません。</span>
+            <span lang="en">Yes. FirnPlanner works entirely with local files, and there is no server run by the developer. The only cases where it uses the network are: reading your events when Google Calendar integration is turned on in Settings, a one-time download when you paste a remote image URL into your notes, checking for a new version, and sending anonymous usage statistics (never the content you write — see the <a href="privacy.html">privacy policy</a> for details). Nothing else touches the network.</span>
+          </p>
+        </div>
+      </details>
+      <details class="faq-item" id="q-requirements">
+        <summary><span lang="ja">動作環境は​?</span><span lang="en">What are the system requirements?</span></summary>
+        <div class="faq-a">
+          <p>
+            <span lang="ja">macOS 26 以降が​必要です。</span>
+            <span lang="en">macOS 26 or later is required.</span>
+          </p>
+        </div>
+      </details>
+      <details class="faq-item" id="q-undo">
+        <summary><span lang="ja">うっかり消してしまった​内容は​戻せますか​?</span><span lang="en">Can I recover content I accidentally deleted?</span></summary>
+        <div class="faq-a">
+          <p>
+            <span lang="ja">アプリ内の​取り消し (⌘Z) は、​その場で​編集していた​範囲に​効きます。​ファイルは​普通の​ Markdown なので、​それより​前の​状態は​ Time Machine などバックアップから、​その​日の​ファイルだけを​取り出して​戻せます。​保存先を​ iCloud Drive や​ Dropbox のような​同期フォルダに​している​場合は、​それぞれの​サービスが​持つバージョン履歴からも​戻せます。</span>
+            <span lang="en">The app’s own Undo (⌘Z) covers the edit you just made in that session. Since your files are plain Markdown, you can also restore an earlier state of a single day’s file from a backup such as Time Machine. If you keep your files in a synced folder like iCloud Drive or Dropbox, that service’s own version history is another way to recover a file.</span>
+          </p>
+        </div>
+      </details>
+      <details class="faq-item" id="q-contact">
+        <summary><span lang="ja">問い​合わせ先は​?</span><span lang="en">How can I contact you?</span></summary>
+        <div class="faq-a">
+          <p>
+            <span lang="ja"><a href="https://github.com/l4l4dev/FirnPlanner/issues">GitHub の​ Issues</a> から​お知らせください。</span>
+            <span lang="en">Please reach out via <a href="https://github.com/l4l4dev/FirnPlanner/issues">GitHub Issues</a>.</span>
+          </p>
+        </div>
+      </details>
     </main>
 
     <footer class="site-footer t">

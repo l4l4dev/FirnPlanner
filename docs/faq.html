@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html data-lang="ja" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>よくある質問 — FirnPlanner</title>
+<meta name="description" content="FirnPlanner のよくある質問。保存先とファイル形式、オフライン利用、動作環境、データの復元、問い合わせ先について。">
+<meta property="og:title" content="FirnPlanner — よくある質問">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://firnplanner.l4l4.dev/faq.html">
+<meta property="og:locale" content="ja_JP">
+<script>
+(function () {
+  try {
+    var lang = localStorage.getItem("firnplanner-lang");
+    if (!lang) lang = (navigator.language || "en").toLowerCase().indexOf("ja") === 0 ? "ja" : "en";
+    var theme = localStorage.getItem("firnplanner-theme");
+    if (!theme) theme = (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) ? "dark" : "light";
+    document.documentElement.setAttribute("data-lang", lang);
+    document.documentElement.setAttribute("data-theme", theme);
+  } catch (e) {}
+})();
+</script>
+<link rel="stylesheet" href="style.css">
+<script src="analytics.js" defer></script>
+<script src="site.js" defer></script>
+</head>
+<body>
+<div class="page">
+
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <svg class="brand-mark" viewBox="0 0 1024 1024" width="36" height="36" aria-hidden="true">
+        <defs><clipPath id="brandClip"><circle cx="512" cy="512" r="440"/></clipPath></defs>
+        <circle cx="512" cy="512" r="440" fill="#F0F4F9"/>
+        <g clip-path="url(#brandClip)">
+          <path d="M60 584 C 300 500, 560 620, 980 524 L 980 1000 L 60 1000 Z" fill="#F2A93B"/>
+          <path d="M60 680.4 C 300 609, 560 711, 980 629.4 L 980 1000 L 60 1000 Z" fill="#1E2D4D"/>
+          <path d="M60 786.8 C 300 728, 560 812, 980 744.8 L 980 1000 L 60 1000 Z" fill="#051424"/>
+          <circle cx="640" cy="596" r="50" fill="#1B7FE3"/>
+        </g>
+      </svg>
+      <span class="brand-name t">FirnPlanner</span>
+    </a>
+    <div class="toggles">
+      <div class="toggle-group lang-toggle t">
+        <button type="button" class="toggle-btn" data-set-lang="ja">日本語</button>
+        <button type="button" class="toggle-btn" data-set-lang="en">English</button>
+      </div>
+      <div class="toggle-group theme-toggle t">
+        <button type="button" class="toggle-btn" data-set-theme="light" aria-label="Light theme">☀</button>
+        <button type="button" class="toggle-btn" data-set-theme="dark" aria-label="Dark theme">☾</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="copy">
+    <main class="policy">
+      <h1><span lang="ja">よくある質問</span><span lang="en">Frequently Asked Questions</span></h1>
+
+      <p class="lede">
+        <span lang="ja">よく​ある​質問を​まとめました。​載っていない​ことは​問い合わせ先から​お知らせください。</span><span lang="en">Answers to common questions. If yours isn’t here, please reach out via the contact link below.</span>
+      </p>
+
+      <ol>
+        <li><a href="#q-storage"><span lang="ja">保存先は​どこですか​? Markdown を​他の​エディタで​開いても​よいですか​?</span><span lang="en">Where are my files stored? Can I open the Markdown files in another editor?</span></a></li>
+        <li><a href="#q-offline"><span lang="ja">オフラインで​使えますか​?</span><span lang="en">Does it work offline?</span></a></li>
+        <li><a href="#q-requirements"><span lang="ja">動作環境は​?</span><span lang="en">What are the system requirements?</span></a></li>
+        <li><a href="#q-undo"><span lang="ja">うっかり消してしまった​内容は​戻せますか​?</span><span lang="en">Can I recover content I accidentally deleted?</span></a></li>
+        <li><a href="#q-contact"><span lang="ja">問い​合わせ先は​?</span><span lang="en">How can I contact you?</span></a></li>
+      </ol>
+
+      <h2 id="q-storage"><span lang="ja">保存先は​どこですか​? Markdown を​他の​エディタで​開いても​よいですか​?</span><span lang="en">Where are my files stored? Can I open the Markdown files in another editor?</span></h2>
+      <p>
+        <span lang="ja">既定の​保存先は​ <code>~/Documents/FirnPlanner</code> です (設定​「ファイル」で​変更できます)。​日ごとの​ファイルは​ <code>Daily/年/月/年-月-日.md</code> (例: <code>Daily/2026/09/2026-09-01.md</code>)、​Inbox は​保存先ルート直下の​ <code>Inbox.md</code>、​繰り返しタスクの​定義は​同じく​ <code>Recurring.md</code> に​保存されます。​どれも​普通の​ Markdown ファイルなので、​他の​テキストエディタや​ AI ツールで​開いて​読み​書きしてかまいません。</span>
+        <span lang="en">By default your files are stored under <code>~/Documents/FirnPlanner</code> (you can change this in Settings &gt; Files). Each day is one file at <code>Daily/YYYY/MM/YYYY-MM-DD.md</code> (e.g. <code>Daily/2026/09/2026-09-01.md</code>), the Inbox is <code>Inbox.md</code> at the root of that folder, and recurring task definitions live in <code>Recurring.md</code>. These are all plain Markdown files, so it is fine to open and edit them with another text editor or an AI tool.</span>
+      </p>
+
+      <h2 id="q-offline"><span lang="ja">オフラインで​使えますか​?</span><span lang="en">Does it work offline?</span></h2>
+      <p>
+        <span lang="ja">はい、​使えます。​FirnPlanner は​ローカルの​ファイルだけで​動き、​開発者の​サーバーは​ありません。​ネットワークを​使うのは​次の​場合だけです: 設定で​ Google カレンダー連携を​オンに​している​ときの​予定の​読み取り、​本文に​貼った​リモート画像の​1回だけの​取り込み、​新しい​版が​ないかの​確認、​匿名の​使用状況の​送信 (内容は​含みません。​詳しくは​<a href="privacy.html">プライバシーポリシー</a>を​ご覧ください)。​これら​以外の​操作に​通信は​発生しません。</span>
+        <span lang="en">Yes. FirnPlanner works entirely with local files, and there is no server run by the developer. The only cases where it uses the network are: reading your events when Google Calendar integration is turned on in Settings, a one-time download when you paste a remote image URL into your notes, checking for a new version, and sending anonymous usage statistics (never the content you write — see the <a href="privacy.html">privacy policy</a> for details). Nothing else touches the network.</span>
+      </p>
+
+      <h2 id="q-requirements"><span lang="ja">動作環境は​?</span><span lang="en">What are the system requirements?</span></h2>
+      <p>
+        <span lang="ja">macOS 26 以降が​必要です。</span>
+        <span lang="en">macOS 26 or later is required.</span>
+      </p>
+
+      <h2 id="q-undo"><span lang="ja">うっかり消してしまった​内容は​戻せますか​?</span><span lang="en">Can I recover content I accidentally deleted?</span></h2>
+      <p>
+        <span lang="ja">アプリ内の​取り消し (⌘Z) は、​その場で​編集していた​範囲に​効きます。​ファイルは​普通の​ Markdown なので、​それより​前の​状態は​ Time Machine などバックアップから、​その​日の​ファイルだけを​取り出して​戻せます。​保存先を​ iCloud Drive や​ Dropbox のような​同期フォルダに​している​場合は、​それぞれの​サービスが​持つバージョン履歴からも​戻せます。</span>
+        <span lang="en">The app’s own Undo (⌘Z) covers the edit you just made in that session. Since your files are plain Markdown, you can also restore an earlier state of a single day’s file from a backup such as Time Machine. If you keep your files in a synced folder like iCloud Drive or Dropbox, that service’s own version history is another way to recover a file.</span>
+      </p>
+
+      <h2 id="q-contact"><span lang="ja">問い​合わせ先は​?</span><span lang="en">How can I contact you?</span></h2>
+      <p>
+        <span lang="ja"><a href="https://github.com/l4l4dev/FirnPlanner/issues">GitHub の​ Issues</a> から​お知らせください。</span>
+        <span lang="en">Please reach out via <a href="https://github.com/l4l4dev/FirnPlanner/issues">GitHub Issues</a>.</span>
+      </p>
+    </main>
+
+    <footer class="site-footer t">
+      <span>© 2026 l4l4dev</span>
+      <span>
+        <a href="index.html"><span lang="ja">FirnPlanner トップへ戻る</span><span lang="en">Back to FirnPlanner</span></a>
+        · <a href="privacy.html"><span lang="ja">プライバシーポリシー</span><span lang="en">Privacy policy</span></a>
+        · <a href="https://github.com/l4l4dev/FirnPlanner/issues">Issues</a>
+        · <a href="https://github.com/l4l4dev/FirnPlanner/releases">Releases</a>
+      </span>
+    </footer>
+  </div>
+</div>
+</body>
+</html>

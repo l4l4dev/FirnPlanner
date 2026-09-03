@@ -369,6 +369,159 @@ a:hover { color: var(--amber-text); }
   background: var(--blue);
 }
 
+/* ---------- ヒーロー直下の3コマ (Inbox → 日ページ → 明日へ) ---------- */
+.story {
+  margin-top: 56px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px 12px;
+}
+
+.story-frame { display: flex; flex-direction: column; min-width: 0; }
+
+.story-heading {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.story-desc {
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--sub);
+  flex: 1;
+}
+
+/* ミニ画面。3コマとも高さを揃える (アプリの 230pt と同じ) */
+.story-panel {
+  height: 230px;
+  padding: 10px;
+  background: var(--pane);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* 1コマ目: Inbox */
+.story-inbox-head {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 10px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .04em;
+  color: var(--sub);
+}
+
+.story-inbox-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 10px;
+  line-height: 1.4;
+  color: var(--text);
+}
+
+.story-inbox-list li { position: relative; padding-left: 9px; }
+
+.story-inbox-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--sub);
+}
+
+/* 2・3コマ目: 左にエディタ風の行、右にタイムライン */
+.story-day { display: flex; align-items: flex-start; gap: 6px; }
+
+.story-editor {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.story-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+  font-size: 9.5px;
+  line-height: 1.4;
+  color: var(--text);
+}
+
+.story-row .mock-checkbox {
+  width: 9px;
+  height: 9px;
+  border-width: 1px;
+  margin-top: 2px;
+}
+
+.story-row-title { min-width: 0; }
+.story-row.done { color: var(--sub); }
+.story-row.done .story-row-title { text-decoration: line-through; }
+
+/* 「→ 明日」の札: 完了ブロックの地 (--done) に控えめな文字色 (--sub) */
+.story-tag {
+  flex: none;
+  align-self: flex-start;
+  font-size: 8px;
+  font-weight: 600;
+  line-height: 1.3;
+  padding: 2px 5px;
+  border-radius: 999px;
+  color: var(--sub);
+  background: var(--done);
+  white-space: nowrap;
+}
+
+/* タイムライン: 目盛 14px + レーン 122px を 4px 空けて並べる。
+   目盛は実時刻に対応せず、レーンの高さに均等に配るだけの目印 */
+.story-timeline { flex: none; display: flex; align-items: flex-start; gap: 4px; }
+
+.story-axis {
+  width: 14px;
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-family: var(--mono);
+  font-size: 7px;
+  line-height: 1;
+  color: var(--sub);
+}
+
+.story-lane { width: 122px; flex: none; }
+
+/* ブロックの高さは所要時間に比例 (0.6px/分)。地続きの間は 2px、
+   そうでない空きは実時間によらず一律 20px (インラインの margin-top) */
+.story-block {
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  padding: 0 6px;
+  font-size: 8.5px;
+  font-weight: 500;
+  color: var(--block-text);
+  background: var(--block);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.story-block.done { background: var(--done); color: var(--sub); }
+
 /* ---------- 機能グリッド ---------- */
 .features {
   margin-top: 72px;
@@ -583,6 +736,8 @@ a:hover { color: var(--amber-text); }
 
   .hero { grid-template-columns: 1fr; gap: 32px; }
   .hero-copy h1 { font-size: 30px; }
+
+  .story { grid-template-columns: 1fr; margin-top: 40px; gap: 32px; }
 
   .features { grid-template-columns: 1fr; padding: 24px; margin-top: 48px; gap: 28px; }
   .split { grid-template-columns: 1fr; margin-top: 48px; gap: 32px; }

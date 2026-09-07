@@ -3,6 +3,32 @@
     <channel>
         <title>FirnPlanner</title>
         <item>
+            <title>0.1.0-beta.7</title>
+            <pubDate>Mon, 07 Sep 2026 13:53:44 +0900</pubDate>
+            <sparkle:version>2427</sparkle:version>
+            <sparkle:shortVersionString>0.1.0-beta.7</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<h3>変更点</h3>
+<ul>
+  <li>週のページを追加しました。上部の「Weekly」タブから開き、7 日分の達成・所要時間・気分をまとめて見られます。週のメモも書けます (Weekly/ フォルダに週ごとの Markdown として保存されます)</li>
+  <li>日に紐づかないノートのページを追加しました。サイドバーの「ノート」の欄からフォルダとノートを作れ、フォルダの改名、ノートのドラッグ &amp; ドロップでのフォルダ移動、HTML ファイルの取り込み (本文の場所にそのまま表示) ができます</li>
+  <li>エディタのツールバーの見出しボタンは、キャレットのある行の種類 (本文 / H1〜H4) を表示するようになりました。⌘1 / ⌘2 / ⌘3 で見出し 1〜3、⌘0 で本文に戻せます</li>
+  <li>見出しの行で改行しても、次の行に # を引き継がないようにしました</li>
+  <li>見出しの末尾に #タグ を打つと、左の余白に色付きのプロジェクトの札が付きます (色は名前から自動で決まります)</li>
+  <li>見出しと本文の間隔、空行を挟んだブロックの境目の余白を見直し、キャレットの高さを本文の文字に揃えました</li>
+  <li>Inbox の行、タイムライン、メニューバーの表示で Markdown のリンク記法がそのまま出ていたのを、タイトルだけにしました</li>
+  <li>設定画面を見直しました。タブを切り替えると上端から表示、行と説明文を 1 つの塊に、「見出しにゴールとタグを出す」をゴールとタグの別々の項目に分けました</li>
+  <li>はじめての起動の案内に 3 コマの図 (Inbox に書く → 日ページに置く → 明日へ送る) を足しました</li>
+  <li>アプリ全体の文言を見直し、用語 (やり残し・送る・読めませんでした など) を揃えました</li>
+  <li>トップバーの日付タブの幅が、タスクの無い日や週のページへの切り替えで動かないようにしました</li>
+  <li>週のメモのエディタが画面の下端まで広がるようになりました (ふりかえりの節が無い週は日の列の下の余りを全部使います)</li>
+  <li>スニペット・テンプレート・AI の集計のフォルダが読めない (権限が無い) ときは、静かに空にせず帯で知らせるようにしました</li>
+  <li>保存の安全性を高めました: 終了 (⌘Q) 時に Inbox / 繰り返しの保存失敗も確認し、配置の保存失敗は状態に持って再試行します</li>
+</ul>
+]]></description>
+            <enclosure url="https://github.com/l4l4dev/FirnPlanner/releases/download/v0.1.0-beta.7/FirnPlanner-0.1.0-beta.7.dmg" length="12280212" type="application/octet-stream" sparkle:edSignature="+8g8fSeaWW+C2Wd8uJ7wm00omHPkVvsQ3SrRL9yrnAZC64XCO7AmIGpdIJq6C4QZ1Le2q0DzimIL2v7L6hWrBg=="/>
+        </item>
+        <item>
             <title>0.1.0-beta.6</title>
             <pubDate>Sun, 30 Aug 2026 22:11:07 +0900</pubDate>
             <sparkle:version>1629</sparkle:version>

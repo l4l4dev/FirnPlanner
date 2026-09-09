@@ -3,6 +3,20 @@
     <channel>
         <title>FirnPlanner</title>
         <item>
+            <title>0.1.0-beta.9</title>
+            <pubDate>Thu, 10 Sep 2026 01:07:05 +0900</pubDate>
+            <sparkle:version>2869</sparkle:version>
+            <sparkle:shortVersionString>0.1.0-beta.9</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<h3>変更点</h3>
+<ul>
+  <li>beta.8 で、起動直後から動作が極端に遅くなり、ノートを開く・設定を開く・閉じるで固まる (ポインタが虹色になる) ことがあったのを直しました。エディタのツールバーが、画面に収まる個数を決めるために全部の並び方を毎回作り直していたのが原因です。ボタンの幅を一度だけ測って個数を計算する形に変えました</li>
+  <li>あわせて、キャレットを動かしたときやウィンドウの切り替えのたびに走っていたツールバーの再計測が無くなり、全体に軽くなっています</li>
+</ul>
+]]></description>
+            <enclosure url="https://github.com/l4l4dev/FirnPlanner/releases/download/v0.1.0-beta.9/FirnPlanner-0.1.0-beta.9.dmg" length="20023293" type="application/octet-stream" sparkle:edSignature="j4fmLp6cbhcxpOv2JyA0h5aDRtucqG5qJBTpvM5h7RGNhOTugBTtW4ZXReYZ7lGSxkYgw/poPGTfaYj9sU0RAg=="/>
+        </item>
+        <item>
             <title>0.1.0-beta.8</title>
             <pubDate>Thu, 10 Sep 2026 00:04:23 +0900</pubDate>
             <sparkle:version>2863</sparkle:version>

@@ -3,6 +3,25 @@
     <channel>
         <title>FirnPlanner</title>
         <item>
+            <title>0.1.0-beta.12</title>
+            <pubDate>Thu, 10 Sep 2026 20:18:53 +0900</pubDate>
+            <sparkle:version>2992</sparkle:version>
+            <sparkle:shortVersionString>0.1.0-beta.12</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<h3>変更点</h3>
+<ul>
+  <li>ノートに画像をドラッグ&amp;ドロップしても入らなかったのを直しました</li>
+  <li>表の最終行で Enter すると、キャレットが表の直下の空行ではなく次の見出しに飛んでいたのを直しました</li>
+  <li>画像の行: タイトルと画像の間に空行ぶんの余白が入っていたのを直しました。素の Markdown 表示では画像の空白を出さず、記法の 1 行だけにしました</li>
+  <li>画像の行の末尾で Enter すると、キャレットが画像の上に重なって次の行が打てなかったのを直しました</li>
+  <li>表のある日付を開いたとき、ウィンドウ幅やサイドバーの幅が変わると表より後ろの本文が描かれなくなることがあったのを直しました</li>
+  <li>コードブロックの閉じフェンスの下で Enter して文字を打つと行が上にずれていたのを直しました</li>
+  <li>動作のなめらかさ: mermaid 図の描き直し、選択・ホバー時の本文の走査、Inbox のドラッグ中の走査、サイドバーの一覧の生成を減らしました</li>
+</ul>
+]]></description>
+            <enclosure url="https://github.com/l4l4dev/FirnPlanner/releases/download/v0.1.0-beta.12/FirnPlanner-0.1.0-beta.12.dmg" length="19974970" type="application/octet-stream" sparkle:edSignature="RJZEBQn1mwG/q06st2qLkdx0oWcSKQYoPSx1Nhw1IC6ZY6uI/Lg/RxwsTpWUWphYFYXNFNnt8yIb5pv8S8XaAw=="/>
+        </item>
+        <item>
             <title>0.1.0-beta.11</title>
             <pubDate>Thu, 10 Sep 2026 12:51:22 +0900</pubDate>
             <sparkle:version>2943</sparkle:version>

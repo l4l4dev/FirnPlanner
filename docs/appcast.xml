@@ -3,6 +3,20 @@
     <channel>
         <title>FirnPlanner</title>
         <item>
+            <title>0.1.0-beta.11</title>
+            <pubDate>Thu, 10 Sep 2026 12:51:22 +0900</pubDate>
+            <sparkle:version>2943</sparkle:version>
+            <sparkle:shortVersionString>0.1.0-beta.11</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<h3>変更点</h3>
+<ul>
+  <li>beta.10 で、日やノートを開いたときに本文の 1 行目より後ろが描かれない (ノートでは見出しの上半分が隠れる) 不具合を直しました。開いた直後のキャレットが見えなかったのも同じ原因です</li>
+  <li>改行した直後の空行でキャレットが上寄りに出て、文字を打った瞬間に行が下にずれていたのを直しました。空行を挟んだブロックの間隔が少し広がります (空行の手前に、次のブロックの余白を先に入れる形にしたため)</li>
+</ul>
+]]></description>
+            <enclosure url="https://github.com/l4l4dev/FirnPlanner/releases/download/v0.1.0-beta.11/FirnPlanner-0.1.0-beta.11.dmg" length="19947909" type="application/octet-stream" sparkle:edSignature="0j0WwndNYUoLQIYE8TnNit0vdbt5yjmc8Jq8gd9t3Os9xssj6hZMxPp3R491LyRQs7fQ/ZQtY8EDlUUWmXBFBQ=="/>
+        </item>
+        <item>
             <title>0.1.0-beta.10</title>
             <pubDate>Thu, 10 Sep 2026 11:04:28 +0900</pubDate>
             <sparkle:version>2927</sparkle:version>

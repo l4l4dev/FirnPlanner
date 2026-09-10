@@ -3,6 +3,31 @@
     <channel>
         <title>FirnPlanner</title>
         <item>
+            <title>0.1.0-beta.10</title>
+            <pubDate>Thu, 10 Sep 2026 11:04:28 +0900</pubDate>
+            <sparkle:version>2927</sparkle:version>
+            <sparkle:shortVersionString>0.1.0-beta.10</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<h3>変更点</h3>
+<ul>
+  <li>日やノートを開いた直後のキャレットが、1 行目の左端 (番号の札やチェックボックスより左) に立っていたのを直しました。行頭の記法を抜けた位置 (□ とタイトルの間、見出しの 1 文字目の手前など) に立ちます</li>
+  <li>やり残しを集める範囲を「今日より前の全日付」から「最後にアプリを使った日の 90 日前から」に変えました。毎日使っていれば直近 90 日、しばらく開いていなかったときはその空白期間ぶんも遡って拾います。過去のファイルを全部読まなくなるぶん、日の切り替えが軽くなります</li>
+  <li>全体の動作を軽くしました。beta.8 で固まった原因 (ツールバー) とは別に、ふつうの Mac で引っかかりになっていた処理を一通り見直しています</li>
+  <li>文字を打つたびに本文を何度も読み直していたのをやめ、1 回で済ませるようにしました (1 打鍵あたりの処理をおよそ 3 分の 1 に)</li>
+  <li>装飾の当て直し、コードブロックや引用の帯の位置決め、ツールチップの付け直しを、変わった部分と画面に見えている範囲だけに絞りました</li>
+  <li>タイムラインが 1 分ごとやマウスを動かすたびに全ブロックを作り直していたのをやめました</li>
+  <li>テーマの色を毎回作り直していたのをやめ、テーマごとに 1 度だけ用意するようにしました</li>
+  <li>検索が文字を打つたびに全ファイルを読み直していたのをやめ、変わったファイルだけ読み直すようにしました</li>
+  <li>やり残しと「記録のある日」の読み込みが一度に何百ものファイルを開いていたのを、8 件ずつに絞りました。保存や検索など他の処理が巻き込まれて止まらなくなります</li>
+  <li>文字を打っている最中にサイドバーの月カレンダーを読み直していたのを、保存が終わった時だけにしました</li>
+  <li>本文とタイムラインの分割線をドラッグしたときの再計算を減らしました</li>
+  <li>起動時の初期化の順序を見直し、最初の画面が出るまでの処理を減らしました</li>
+  <li>ノートの中の画像のキャッシュに上限を付けました</li>
+</ul>
+]]></description>
+            <enclosure url="https://github.com/l4l4dev/FirnPlanner/releases/download/v0.1.0-beta.10/FirnPlanner-0.1.0-beta.10.dmg" length="19948610" type="application/octet-stream" sparkle:edSignature="ooW1g1zcW3R0BIdFuW+KPK6a3M1K+NVm2ryCQ+c3rg2azvm6l3kwBhLZ6uSqpOSV3zNI1ceGsji9xISBO1LMCw=="/>
+        </item>
+        <item>
             <title>0.1.0-beta.9</title>
             <pubDate>Thu, 10 Sep 2026 01:07:05 +0900</pubDate>
             <sparkle:version>2869</sparkle:version>

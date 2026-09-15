@@ -3,6 +3,27 @@
     <channel>
         <title>FirnPlanner</title>
         <item>
+            <title>0.1.0-beta.13</title>
+            <pubDate>Tue, 15 Sep 2026 22:26:20 +0900</pubDate>
+            <sparkle:version>3476</sparkle:version>
+            <sparkle:shortVersionString>0.1.0-beta.13</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<h3>変更点</h3>
+<ul>
+  <li>タスクの状態に「やらない」`[-]` と「依頼済み」`[d]` を足しました。Inbox の行と週の振り返り (依頼先の表示) もこの状態に合わせました</li>
+  <li>Enter で分けた段落の間隔を詰め、Shift+Enter を段落内の改行 (余白なし) にしました。その改行の直後に文字を打ってもずれないようにしました</li>
+  <li>画像の表示幅を記法で指定できるようにしました (`![説明|720](path)`)。幅の指定が無い画像は本文の幅いっぱいに表示します</li>
+  <li>日次テンプレートの繰り返しの差し込み位置 `&lt;繰り返し&gt;` を札として表示し、編集中に一覧から挿入できるようにしました</li>
+  <li>設定をウィンドウに重ねるシートにしました。開閉はフェードで、「このアプリについて」とオープンソースライセンスの一覧を追加しました (ライセンスの一覧は横スライドで押し込み、‹ で戻ります)</li>
+  <li>字下げした普通の箇条書きや文を、本文と同じ色・大きさにしました</li>
+  <li>起動直後にキーボード入力が本文に届かないことがあったのと、空のページでキャレットの高さが合わなかったのを直しました</li>
+  <li>Google カレンダーの予定を、前回の内容を先に出してからカレンダーごとに並行して取り込むようにしました</li>
+  <li>動作のなめらかさ: 保存を画面の処理と切り離し、週ページの組み立てを裏で行い、1 打鍵ごとの解析と装飾の張り替えを減らしました</li>
+</ul>
+]]></description>
+            <enclosure url="https://github.com/l4l4dev/FirnPlanner/releases/download/v0.1.0-beta.13/FirnPlanner-0.1.0-beta.13.dmg" length="20755936" type="application/octet-stream" sparkle:edSignature="t/3+FVO43N/0uWQjGppK14PzLwgzBpnUZIUCTc4TY4x5xmwE54do00PIbYAT9w1A9hqQ0YwWVzdomyercY+aDQ=="/>
+        </item>
+        <item>
             <title>0.1.0-beta.12</title>
             <pubDate>Thu, 10 Sep 2026 20:18:53 +0900</pubDate>
             <sparkle:version>2992</sparkle:version>

@@ -18,7 +18,7 @@ macOS 向けの1日プランナーです。Markdown で書いたタスクが、�
 
 [Releases](https://github.com/l4l4dev/FirnPlanner/releases) ページから最新版をダウンロードしてください。
 
-<!-- TODO: スクリーンショットを追加予定 -->
+![FirnPlanner のメイン画面。左に Markdown の日ファイル、右にタイムライン](docs/images/screenshot-main.png)
 
 ## インストール
 

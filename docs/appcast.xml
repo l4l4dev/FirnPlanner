@@ -3,6 +3,27 @@
     <channel>
         <title>FirnPlanner</title>
         <item>
+            <title>0.1.0</title>
+            <pubDate>Wed, 16 Sep 2026 18:23:56 +0900</pubDate>
+            <sparkle:version>3689</sparkle:version>
+            <sparkle:shortVersionString>0.1.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<h3>変更点</h3>
+<ul>
+  <li>β を外して 0.1.0 になりました。ダウンロード後の「右クリック → 開く」の手順は要らなくなり、更新のたびに書類フォルダやキーチェーンの許可を聞かれることも無くなります</li>
+  <li>メニューバーに「書式」を足しました。太字・見出し・表・リンク・コードブロックなど、ツールバーの操作をメニューとショートカットからも使えます。表の中では「書式 &gt; 表」から行や列を足したり消したりできます</li>
+  <li>メニューバー「選択中のタスク」に「開始する / 開始を取り消す」「やらないことにする」「依頼済みにする」を足しました</li>
+  <li>箇条書き・チェックボックス・番号リストの長い行が折り返したとき、2 行目以降が本文の左端に揃うようにしました</li>
+  <li>タイムラインで予定がある時間帯は、予定の囲いをタスク側まで伸ばして薄く塗るようにしました。タスクが予定を避けて置かれている理由が見えます</li>
+  <li>予定のタイトルは、ブロックの高さに余裕があれば折り返して全文を表示します</li>
+  <li>見出しボタンのメニューがボタンの真下に出るようにしました。やり残しの行と「今日へ」「Inbox へ」のホバーの色を欄の色に合わせました</li>
+  <li>AI の記録は「概要」から開くようにしました</li>
+  <li>動作のなめらかさ: 長い日ファイルでの打鍵中の処理を減らしました (装飾の解析、画像記法の判定、本文の比較、メニューの再構築)</li>
+</ul>
+]]></description>
+            <enclosure url="https://github.com/l4l4dev/FirnPlanner/releases/download/v0.1.0/FirnPlanner-0.1.0.dmg" length="21201144" type="application/octet-stream" sparkle:edSignature="rf69R2YWT+y8V1SgewanFUWYLB5qRx78OnzNsS9Tdewzg8UMQJXOb5zvj4YU4KKybKkyEJfYOmgRdVIrpGSNDg=="/>
+        </item>
+        <item>
             <title>0.1.0-beta.13</title>
             <pubDate>Tue, 15 Sep 2026 22:26:20 +0900</pubDate>
             <sparkle:version>3476</sparkle:version>

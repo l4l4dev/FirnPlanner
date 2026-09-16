@@ -614,7 +614,7 @@ a:hover { color: var(--amber-text); }
 
 .md-dim { color: var(--sub); }
 
-/* ---------- β版の案内 ---------- */
+/* ---------- インストール案内 ---------- */
 .beta-box {
   margin-top: 64px;
   padding: 24px 28px;

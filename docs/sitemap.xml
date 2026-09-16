@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Search Console > サイトマップ に sitemap.xml を登録すると、
+  Google にこの一覧を伝えられる (登録作業自体は @l4l4dev が行う)。
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://firnplanner.l4l4.dev/</loc>
+    <lastmod>2026-09-16</lastmod>
+  </url>
+  <url>
+    <loc>https://firnplanner.l4l4.dev/faq.html</loc>
+    <lastmod>2026-09-16</lastmod>
+  </url>
+  <url>
+    <loc>https://firnplanner.l4l4.dev/privacy.html</loc>
+    <lastmod>2026-09-16</lastmod>
+  </url>
+</urlset>

@@ -50,6 +50,7 @@
     var body = document.querySelector(".copy");
     function commit() {
       root.setAttribute("data-lang", lang);
+      root.setAttribute("lang", lang);
       updateToggle(".lang-toggle", lang, "data-set-lang");
       if (body) {
         body.style.opacity = "1";

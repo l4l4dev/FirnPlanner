@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html data-lang="ja" data-theme="light">
+<html lang="ja" data-lang="ja" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>プライバシーポリシー — FirnPlanner</title>
 <meta name="description" content="FirnPlanner のプライバシーポリシー。予定・タスク・ふりかえりはあなたの Mac にだけ保存され、開発者のサーバーはありません。">
+<link rel="canonical" href="https://firnplanner.l4l4.dev/privacy.html">
 <meta property="og:title" content="FirnPlanner プライバシーポリシー">
+<meta property="og:description" content="FirnPlanner のプライバシーポリシー。予定・タスク・ふりかえりはあなたの Mac にだけ保存され、開発者のサーバーはありません。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://firnplanner.l4l4.dev/privacy.html">
 <meta property="og:locale" content="ja_JP">
+<!-- og:image は画像が用意できたら足す -->
+<meta name="twitter:card" content="summary">
 <script>
 (function () {
   try {
@@ -17,6 +21,7 @@
     var theme = localStorage.getItem("firnplanner-theme");
     if (!theme) theme = (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) ? "dark" : "light";
     document.documentElement.setAttribute("data-lang", lang);
+    document.documentElement.setAttribute("lang", lang);
     document.documentElement.setAttribute("data-theme", theme);
   } catch (e) {}
 })();

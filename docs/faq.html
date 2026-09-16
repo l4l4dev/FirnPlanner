@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html data-lang="ja" data-theme="light">
+<html lang="ja" data-lang="ja" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>よくある質問 — FirnPlanner</title>
 <meta name="description" content="FirnPlanner のよくある質問。保存先とファイル形式、オフライン利用、動作環境、データの復元、問い合わせ先について。">
+<link rel="canonical" href="https://firnplanner.l4l4.dev/faq.html">
 <meta property="og:title" content="FirnPlanner — よくある質問">
+<meta property="og:description" content="FirnPlanner のよくある質問。保存先とファイル形式、オフライン利用、動作環境、データの復元、問い合わせ先について。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://firnplanner.l4l4.dev/faq.html">
 <meta property="og:locale" content="ja_JP">
+<!-- og:image は画像が用意できたら足す -->
+<meta name="twitter:card" content="summary">
 <script>
 (function () {
   try {
@@ -17,6 +21,7 @@
     var theme = localStorage.getItem("firnplanner-theme");
     if (!theme) theme = (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) ? "dark" : "light";
     document.documentElement.setAttribute("data-lang", lang);
+    document.documentElement.setAttribute("lang", lang);
     document.documentElement.setAttribute("data-theme", theme);
   } catch (e) {}
 })();
@@ -63,7 +68,7 @@
       </p>
 
       <details class="faq-item" id="q-storage">
-        <summary><span lang="ja">保存先は​どこですか​? Markdown を​他の​エディタで​開いても​よいですか​?</span><span lang="en">Where are my files stored? Can I open the Markdown files in another editor?</span></summary>
+        <summary><h2><span lang="ja">保存先は​どこですか​? Markdown を​他の​エディタで​開いても​よいですか​?</span><span lang="en">Where are my files stored? Can I open the Markdown files in another editor?</span></h2></summary>
         <div class="faq-a">
           <p>
             <span lang="ja">既定の​保存先は​ <code>~/Documents/FirnPlanner</code> です (設定​「ファイル」で​変更できます)。​日ごとの​ファイルは​ <code>Daily/年/月/年-月-日.md</code> (例: <code>Daily/2026/09/2026-09-01.md</code>)、​Inbox は​保存先ルート直下の​ <code>Inbox.md</code>、​繰り返しタスクの​定義は​同じく​ <code>Recurring.md</code> に​保存されます。​どれも​普通の​ Markdown ファイルなので、​他の​テキストエディタや​ AI ツールで​開いて​読み​書きしてかまいません。</span>
@@ -72,7 +77,7 @@
         </div>
       </details>
       <details class="faq-item" id="q-offline">
-        <summary><span lang="ja">オフラインで​使えますか​?</span><span lang="en">Does it work offline?</span></summary>
+        <summary><h2><span lang="ja">オフラインで​使えますか​?</span><span lang="en">Does it work offline?</span></h2></summary>
         <div class="faq-a">
           <p>
             <span lang="ja">はい、​使えます。​FirnPlanner は​ローカルの​ファイルだけで​動き、​開発者の​サーバーは​ありません。​ネットワークを​使うのは​次の​場合だけです: 設定で​ Google カレンダー連携を​オンに​している​ときの​予定の​読み取り、​本文に​貼った​リモート画像の​1回だけの​取り込み、​新しい​版が​ないかの​確認、​匿名の​使用状況の​送信 (内容は​含みません。​詳しくは​<a href="privacy.html">プライバシーポリシー</a>を​ご覧ください)。​これら​以外の​操作に​通信は​発生しません。</span>
@@ -81,7 +86,7 @@
         </div>
       </details>
       <details class="faq-item" id="q-requirements">
-        <summary><span lang="ja">動作環境は​?</span><span lang="en">What are the system requirements?</span></summary>
+        <summary><h2><span lang="ja">動作環境は​?</span><span lang="en">What are the system requirements?</span></h2></summary>
         <div class="faq-a">
           <p>
             <span lang="ja">macOS 26 以降が​必要です。</span>
@@ -90,7 +95,7 @@
         </div>
       </details>
       <details class="faq-item" id="q-undo">
-        <summary><span lang="ja">うっかり消してしまった​内容は​戻せますか​?</span><span lang="en">Can I recover content I accidentally deleted?</span></summary>
+        <summary><h2><span lang="ja">うっかり消してしまった​内容は​戻せますか​?</span><span lang="en">Can I recover content I accidentally deleted?</span></h2></summary>
         <div class="faq-a">
           <p>
             <span lang="ja">アプリ内の​取り消し (⌘Z) は、​その場で​編集していた​範囲に​効きます。​ファイルは​普通の​ Markdown なので、​それより​前の​状態は​ Time Machine などバックアップから、​その​日の​ファイルだけを​取り出して​戻せます。​保存先を​ iCloud Drive や​ Dropbox のような​同期フォルダに​している​場合は、​それぞれの​サービスが​持つバージョン履歴からも​戻せます。</span>
@@ -99,7 +104,7 @@
         </div>
       </details>
       <details class="faq-item" id="q-contact">
-        <summary><span lang="ja">問い​合わせ先は​?</span><span lang="en">How can I contact you?</span></summary>
+        <summary><h2><span lang="ja">問い​合わせ先は​?</span><span lang="en">How can I contact you?</span></h2></summary>
         <div class="faq-a">
           <p>
             <span lang="ja"><a href="https://github.com/l4l4dev/FirnPlanner/issues">GitHub の​ Issues</a> から​お知らせください。</span>

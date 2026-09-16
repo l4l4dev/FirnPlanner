@@ -1,15 +1,40 @@
 <!DOCTYPE html>
-<html data-lang="ja" data-theme="light">
+<html lang="ja" data-lang="ja" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>FirnPlanner — 1日1ファイルの Markdown デイリープランナー</title>
 <meta name="description" content="FirnPlanner は、1日1ファイルの Markdown で予定と実績を書く macOS のデイリープランナーです。チェックボックスの行を書くとタイムラインへ自動で配置されます。">
+<link rel="canonical" href="https://firnplanner.l4l4.dev/">
 <meta property="og:title" content="FirnPlanner">
 <meta property="og:description" content="1日1ファイルの Markdown で予定と実績を書く macOS のデイリープランナー。チェックボックスの行を書くとタイムラインへ自動で配置されます。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://firnplanner.l4l4.dev/">
 <meta property="og:locale" content="ja_JP">
+<!-- og:image は画像が用意できたら足す -->
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "FirnPlanner",
+  "operatingSystem": "macOS 26 以降",
+  "applicationCategory": "ProductivityApplication",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "JPY"
+  },
+  "downloadUrl": "https://github.com/l4l4dev/FirnPlanner/releases/latest/download/FirnPlanner.dmg",
+  "url": "https://firnplanner.l4l4.dev/",
+  "description": "FirnPlanner は、1日1ファイルの Markdown で予定と実績を書く macOS のデイリープランナーです。チェックボックスの行を書くとタイムラインへ自動で配置されます。",
+  "author": {
+    "@type": "Person",
+    "name": "l4l4dev",
+    "url": "https://github.com/l4l4dev"
+  }
+}
+</script>
 <script>
 // テーマ・言語を描画前に確定させ、切り替え前のちらつき (FOUC) を防ぐ。
 (function () {
@@ -19,6 +44,7 @@
     var theme = localStorage.getItem("firnplanner-theme");
     if (!theme) theme = (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) ? "dark" : "light";
     document.documentElement.setAttribute("data-lang", lang);
+    document.documentElement.setAttribute("lang", lang);
     document.documentElement.setAttribute("data-theme", theme);
   } catch (e) {}
 })();
@@ -120,6 +146,7 @@ on a single page of text.</span>
     </section>
 
     <section class="story">
+      <h2 class="sr-only"><span lang="ja">使い方</span><span lang="en">How it works</span></h2>
       <div class="story-frame">
         <div class="story-heading"><span lang="ja">1. Inbox に​書く</span><span lang="en">1. Jot it in Inbox</span></div>
         <p class="story-desc"><span lang="ja">思いついたら、​ひとことで​書いておく。</span><span lang="en">Write it down in a word or two.</span></p>
@@ -194,6 +221,7 @@ on a single page of text.</span>
     </section>
 
     <section class="features t">
+      <h2 class="sr-only"><span lang="ja">できること</span><span lang="en">Features</span></h2>
       <div class="feature">
         <div class="feature-bar" style="background:var(--amber);"></div>
         <div>
@@ -225,6 +253,7 @@ on a single page of text.</span>
     </section>
 
     <section class="split">
+      <h2 class="sr-only"><span lang="ja">締めと保存形式</span><span lang="en">Closing the day and the file format</span></h2>
       <div class="split-col">
         <div class="split-caption"><span lang="ja">1日の​締め</span><span lang="en">Close the day</span></div>
         <div class="sheet-mock t">

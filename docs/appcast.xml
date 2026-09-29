@@ -3,6 +3,34 @@
     <channel>
         <title>FirnPlanner</title>
         <item>
+            <title>0.2.2</title>
+            <pubDate>Tue, 29 Sep 2026 19:50:47 +0900</pubDate>
+            <sparkle:version>5005</sparkle:version>
+            <sparkle:shortVersionString>0.2.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<h3>変更点</h3>
+<ul>
+  <li>付箋を作り直しました。鮮やかな色、角丸、自由な大きさで、糊の帯はなくなりました</li>
+  <li>付箋の色を、文字のメニューではなく紙の見本を並べたポップオーバーから選べるようにしました</li>
+  <li>付箋は、どこを掴んでも動かせるようにしました。1 回クリックで選び、選んだ付箋をもう一度クリックするとその位置から書き始められます。Esc か外をクリックすると書き終えます</li>
+  <li>週のメモのチェック項目を、押してチェックを付けられるようにしました</li>
+  <li>週のページの下半分を、今週の出来事と週のメモの 2 列に並べました。日の列のゴールは折り返して全文が読め、早く終わった日の合計には「早く終了」を添えます</li>
+  <li>週のメモと今週の出来事の見出しを大きくしました</li>
+  <li>日の見出しのゴールを、週のページと同じ専用の色にしました。やり残しの行の日付は、表示中の日と年が違うときだけ年を付けます</li>
+  <li>曜日の表記を、日付見出しを除いて UI の言語にそろえました</li>
+  <li>日の締めのシートで、英語の取り消しボタンを Cancel にし、既定の送り先の行にも行き先を出しました</li>
+  <li>サイドバーの副次の文字と設定の目盛りの数字を、読みやすい色にしました。設定の説明文は 1 行に短くしました</li>
+  <li>ダークで沈んで見えるボタンと、週の列の地を見やすくしました。neco のダークでは、勤務時間外の帯が勤務時間帯より暗くなるようにしました</li>
+  <li>最初の画面に左右の余白を入れ、3 コマの帯や説明文が切れないようにしました。ツアーは、英語のときお手本のデータも英語で出し、強調の枠が角で欠けないようにしました</li>
+  <li>設定でスクロールすると、右上の閉じるボタンが中身と重なる不具合を直しました。ミニカレンダーで日の塗りが週番号の縦線に重なる不具合も直しました</li>
+  <li>複数行を選ぶと、リンクの行が記法に戻って折り返し、下の行が描かれず選択の帯もずれる不具合を直しました</li>
+  <li>箇条書きの中の表に行を足したり表を挿入したりしたとき、字下げが落ちる不具合を直しました。やり残しの移動でも、表ごと運ばれます</li>
+  <li>別のアプリで日のファイルを 2 か所以上書き換えたとき、タイムラインの置き場所が別のタスクに付くことがある不具合を直しました</li>
+</ul>
+]]></description>
+            <enclosure url="https://github.com/l4l4dev/FirnPlanner/releases/download/v0.2.2/FirnPlanner-0.2.2.dmg" length="24682358" type="application/octet-stream" sparkle:edSignature="0ycX0TVVBhCG8CGIgD9HJnU/cUMG/lM3SAVsFtKznvN/kKYNVTu3mctotguIp2qYg8xSuxS3Gn0ERPg14pc/DA=="/>
+        </item>
+        <item>
             <title>0.2.0</title>
             <pubDate>Thu, 24 Sep 2026 23:44:03 +0900</pubDate>
             <sparkle:version>4544</sparkle:version>

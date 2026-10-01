@@ -28,6 +28,16 @@ macOS 向けの1日プランナーです。Markdown で書いたタスクが、�
 
 不具合を見つけた場合や、こういう機能が欲しいという要望は [Issues](https://github.com/l4l4dev/FirnPlanner/issues) からお知らせください。テンプレートに沿って書いていただけると助かります。
 
+## サイトのスモークテスト
+
+配布サイト (`docs/`) をブラウザで開いて、3 ページ × 日本語/英語 × ライト/ダーク × 幅 1280/390 の表示とリンク切れを確かめます。手元では次のとおりです。
+
+```bash
+cd tests/site-smoke
+pnpm install && pnpm exec playwright install chromium
+pnpm test
+```
+
 ## このリポジトリについて
 
 このリポジトリは FirnPlanner の配布とフィードバック受付のための窓口です。開発本体のソースコードは公開していません。

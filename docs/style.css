@@ -79,8 +79,9 @@ body {
 a { color: var(--wordmark); text-decoration: underline; text-underline-offset: 3px; transition: color .4s ease; }
 a:hover { color: var(--amber-text); }
 
-/* 言語の出し分け: 両方の lang="ja" / lang="en" 要素を常に置き、CSS で片方を隠す */
-[lang="en"] { display: none; }
+/* 言語の出し分け: 両方の lang="ja" / lang="en" 要素を常に置き、CSS で片方を隠す。
+   <html> 自身も lang を持つので、隠すのは :root の子孫だけにする (英語のときにページごと消えないように) */
+:root [lang="en"] { display: none; }
 :root[data-lang="en"] [lang="ja"] { display: none; }
 :root[data-lang="en"] [lang="en"] { display: revert; }
 

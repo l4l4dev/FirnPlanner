@@ -3,6 +3,34 @@
     <channel>
         <title>FirnPlanner</title>
         <item>
+            <title>0.3.0</title>
+            <pubDate>Tue, 06 Oct 2026 10:57:02 +0900</pubDate>
+            <sparkle:version>5708</sparkle:version>
+            <sparkle:shortVersionString>0.3.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<h3>変更点</h3>
+<ul>
+  <li>手で書く時刻 (`@HH:MM`) を、15 分刻みでなくても好きな分で書けるようにしました。書いた時刻のままタイムラインに出ます (ドラッグで動かすときは今までどおり 15 分ずつ)</li>
+  <li>時刻を書いた行がタイムラインに載らないとき、時刻の下線とポップオーバーで理由が分かるようにしました</li>
+  <li>プロジェクトの色を、15 色のパレットと「その他…」から自由に選べるようにしました。neco テーマではブランドの 6 色も選べます</li>
+  <li>タイムラインのブロックの左に、行のプロジェクトの色の帯を出すようにしました</li>
+  <li>タグの付いた見出しの下でも、行末に `#-` を書くとその行をプロジェクトから外せるようにしました。空行でも受け継ぎが切れます</li>
+  <li>タスクの下の続きの文章と子の行にも、タスクのプロジェクトの線が続くようにしました。改行した直後の行にも、文字を打つ前から線が出ます</li>
+  <li>空行にしたとき、下の行のプロジェクトの線が残ることがある不具合を直しました</li>
+  <li>未登録のタグを色で登録したとき、札の文字が先頭 4 文字になるようにしました</li>
+  <li>文字を選んで URL を貼ると、`[選んだ文字](URL)` のリンクになるようにしました。⌘⇧V なら URL のまま貼れます</li>
+  <li>子タスクをドラッグで親の外へ出すと、独立したタスクになるようにしました。親のすぐ下では、ポインタを左へ寄せると外、右なら最後の子のままで、挿入の線の位置で分かります</li>
+  <li>タスクの下のメモの箇条書きの点を、題の左端にそろえました</li>
+  <li>文字を選んだときのハイライトが、文字の上まで伸びていたのを直しました</li>
+  <li>繰り返しに「N 週ごと」を足しました。`(2週ごと 月 2026-10-06から)` のように始まりの日を書くと、2 週ごとの指定した曜日に出ます</li>
+  <li>サイドバーの繰り返しの欄で、リンクの記法を題の文字だけで見せるようにしました</li>
+  <li>ノートに PDF を取り込めるようにしました。サイドバーのノートの欄に落とすと一覧に並び、開くと PDF を読めます</li>
+  <li>サイドバーのノートをドラッグで並べ替えられるようにしました。書き換えても位置は動かず、新しいノートは下に足されます</li>
+</ul>
+]]></description>
+            <enclosure url="https://github.com/l4l4dev/FirnPlanner/releases/download/v0.3.0/FirnPlanner-0.3.0.dmg" length="27866684" type="application/octet-stream" sparkle:edSignature="satHEWzPSWc1JXJpqxPPpLsnuWWxlF5cEq7YORwvIleinBUD4XtXuyj2nlVraHzNObnFsGnfR5WGoUGpJyNeBA=="/>
+        </item>
+        <item>
             <title>0.2.3</title>
             <pubDate>Mon, 05 Oct 2026 12:36:20 +0900</pubDate>
             <sparkle:version>5506</sparkle:version>

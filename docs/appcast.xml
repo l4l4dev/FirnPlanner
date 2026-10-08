@@ -3,6 +3,38 @@
     <channel>
         <title>FirnPlanner</title>
         <item>
+            <title>0.4.0</title>
+            <pubDate>Thu, 08 Oct 2026 14:40:51 +0900</pubDate>
+            <sparkle:version>6074</sparkle:version>
+            <sparkle:shortVersionString>0.4.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<h3>変更点</h3>
+<ul>
+  <li>mermaid の図を、同梱の mermaid.js で描くようにしました。描ける図の種類が増え、HTML のノートの図も同じ見た目で描きます</li>
+  <li>キャレットが mermaid のブロックの外にある間は記法を畳み、図だけを見せるようにしました。ブロックに入ると記法が開いて書けます</li>
+  <li>横に長い mermaid の図は、本文の幅に合わせて縮めて全体を見せるようにしました</li>
+  <li>mermaid の記法を開く・閉じるときに、見ていた位置がずれないようにしました</li>
+  <li>ページ内リンク (`[目次](#見出し)`) を ⌘+クリックで、その見出しへ飛べるようにしました</li>
+  <li>表の 1 行目の行頭で文字を打つと、表の上に新しい行ができてそこに入るようにしました</li>
+  <li>設定を、ツールバーの付いた設定ウィンドウで開くようにしました。大きさは次回も保ちます</li>
+  <li>行末に空白を打つと、キャレットが進まずピリオドが入ることがある不具合を直しました。空白は打った数のまま見えます</li>
+  <li>引用の面が、左の線の外にはみ出して塗られていたのを直しました</li>
+  <li>ファイルメニューに「PDF で書き出す…」「印刷…」(⌘P) を足しました</li>
+  <li>ファイルメニューに「時刻付きで書き出す…」を足しました。自動で置いた時刻を `@09:30-10:30` の形で書き込んだ写しを書き出します (元の日ファイルは変えません)</li>
+  <li>ファイルメニューに「NotePlan / Obsidian から取り込む…」を足しました。同じ日が既にあれば飛ばして、一覧で知らせます</li>
+  <li>メニューバーに「今・次」のブロックを出せるようにしました (設定 &gt; 一般、既定はオフ)</li>
+  <li>ショートカット.app・Siri・サービスメニューから Inbox に 1 行足せるようにしました</li>
+  <li>Apple カレンダーの予定を予定レーンに出せるようにしました (設定 &gt; 連携、既定はオフ)</li>
+  <li>サイドバーの繰り返しを、ドラッグで並べ替えられるようにしました。行をエディタやタイムラインへ落とすと、今の日に足せます</li>
+  <li>繰り返しを日のページに入れるとき、時刻の順に並べるようにしました</li>
+  <li>サイドバーの Inbox とノートの欄が、サイドバーと一緒にスクロールするようにしました</li>
+  <li>保存先のフォルダを移動・改名した後に、元の場所へフォルダを作り直して書いてしまう不具合を直しました。見えないときは保存を止めて知らせます</li>
+  <li>完了した行を Inbox や別の日へ送れてしまう不具合を直しました。送った後で子を完了にしたときの親の扱いも直しました</li>
+</ul>
+]]></description>
+            <enclosure url="https://github.com/l4l4dev/FirnPlanner/releases/download/v0.4.0/FirnPlanner-0.4.0.dmg" length="23958258" type="application/octet-stream" sparkle:edSignature="Sa8pCgq6jYGUNX6hAX6zx2CBRglwvgsB/EY7I21YkSuuNjShjH+a4A0jYlbU1o/GAks2cBOcf/KAbe8MQrmvBw=="/>
+        </item>
+        <item>
             <title>0.3.0</title>
             <pubDate>Tue, 06 Oct 2026 10:57:02 +0900</pubDate>
             <sparkle:version>5708</sparkle:version>

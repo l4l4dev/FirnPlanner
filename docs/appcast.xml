@@ -3,6 +3,20 @@
     <channel>
         <title>FirnPlanner</title>
         <item>
+            <title>0.4.1</title>
+            <pubDate>Fri, 09 Oct 2026 15:40:11 +0900</pubDate>
+            <sparkle:version>6155</sparkle:version>
+            <sparkle:shortVersionString>0.4.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>15.6</sparkle:minimumSystemVersion>
+            <description><![CDATA[<h3>変更点</h3>
+<ul>
+  <li>macOS 15.6 以降で使えるようにしました (これまでは macOS 26 以降)。macOS 26 以降での動きは変わりません</li>
+  <li>日の読み込み中にタイムラインのブロックを動かしたとき、前の日の配置を新しい日に書いてしまうことがある不具合を直しました</li>
+</ul>
+]]></description>
+            <enclosure url="https://github.com/l4l4dev/FirnPlanner/releases/download/v0.4.1/FirnPlanner-0.4.1.dmg" length="24317379" type="application/octet-stream" sparkle:edSignature="okp+cClSA4gzvUfyVJREbLrVAzncQc2yWsrAGJEgdrGV1oXDfzU46qoOarFV2+xrQoZiOWC93kW9vns9U9BmCQ=="/>
+        </item>
+        <item>
             <title>0.4.0</title>
             <pubDate>Thu, 08 Oct 2026 14:40:51 +0900</pubDate>
             <sparkle:version>6074</sparkle:version>

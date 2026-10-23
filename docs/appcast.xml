@@ -3,6 +3,64 @@
     <channel>
         <title>FirnPlanner</title>
         <item>
+            <title>0.8.0</title>
+            <pubDate>Fri, 23 Oct 2026 13:11:23 +0900</pubDate>
+            <sparkle:version>7154</sparkle:version>
+            <sparkle:shortVersionString>0.8.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>15.6</sparkle:minimumSystemVersion>
+            <description><![CDATA[<h3>変更点</h3>
+<ul>
+  <li>移動、リサイズ、時間の変更を ⌘Z で取り消せる</li>
+  <li>ドラッグ中に Esc で取り消せる</li>
+  <li>ドラッグ中、端に寄せると自動でスクロールする</li>
+  <li>ブロックの上で手のカーソルを出す</li>
+  <li>時間の変更ポップオーバーを追加</li>
+  <li>吸着する位置をドラッグ中に表示する</li>
+  <li>ブロックを選ぶと、キャレットがタイトルの先頭に入る</li>
+  <li>ノートに `[[ ]]` でリンクを書ける。名前の補完つき</li>
+  <li>ノートやフォルダの名前変更・移動で、リンクを自動で書き換える</li>
+  <li>タスクの行から「ノートにする」でノートを作れる (元に戻せる)</li>
+  <li>進行中のタスクのノートを、サイドバーにまとめて表示する</li>
+  <li>日の行の末尾に、タスクのノートの進み具合を表示する</li>
+  <li>タスクのメモを折りたためる</li>
+  <li>フォルダとノートを自由な順に並べ替えられる</li>
+  <li>ノートの移動を取り消し、やり直しできる</li>
+  <li>.md と HTML ファイルをドロップして取り込める</li>
+  <li>`Notes/` フォルダが外部で変わったとき、自動で読み込み直す</li>
+  <li>行をカードで表示する</li>
+  <li>1 回目のクリックで選択、続けて編集に入る</li>
+  <li>ミニカレンダーの日付へドロップして、その日に入れられる</li>
+  <li>日ごとの合計時間と負荷の帯を表示する</li>
+  <li>未来の日に、繰り返しタスクの予定を表示する</li>
+  <li>キーボードとコンテキストメニューで並べ替えられる</li>
+  <li>タスクの行末に `~10/20` と書くと期限、`10/18~10/20` と書くと期間になる</li>
+  <li>行末の期限の印を、タイムラインのブロックと計画のカードに出す</li>
+  <li>期限が近いもの、過ぎたものにチップを出す</li>
+  <li>年つきの日付を書ける。年を省いた日付は、日のページではその日、ノートと Inbox では今日にいちばん近い日として読む</li>
+  <li>ノートと Inbox では、年を省いて書いた期限に、行を離れたときに年を書き足す (⌘Z で戻せる)。日のページの行は書き換えない</li>
+  <li>カレンダーの予定を右クリックして「タスクにする」を選べる</li>
+  <li>表のセル内の `&lt;br&gt;` を改行として表示する。Option + Return で入れられる</li>
+  <li>コードブロックと引用の入力を直した</li>
+  <li>見出しの行と、検索で飛んだ先のキャレット位置を直した</li>
+  <li>mermaid の文字幅を、画面の拡大率によらず測るようにした</li>
+  <li>区切りの時間が逆のブロックで、達成時間の計算が落ちる問題を直した</li>
+  <li>設定で保存先の一覧を見て、追加・切り替えできる</li>
+  <li>ファイルメニューに「保存先を切り替え」を追加</li>
+  <li>最初に足した保存先以外を開いているとき、上のバーに保存先の名前を出す</li>
+  <li>ヘルプメニューから、フィードバックを送れる</li>
+  <li>使い始めて 1 週間たつと、一度だけフィードバックのお願いを出す (30 秒で消える)。更新した人は、この版を初めて起動した日から数える</li>
+  <li>「今と次」ウィジェットを追加</li>
+  <li>FileVault が切れているとき、iCloud Drive や同期フォルダに保存しているときに、設定で知らせる</li>
+  <li>上のバーの合計時間を、クリックで残り時間に切り替えられる。右側の幅が揺れないようにした</li>
+  <li>neco テーマの選択色を調整した</li>
+  <li>細い線をピクセルに合わせ、1x ディスプレイでもにじまないようにした</li>
+  <li>角丸をすべてなめらかな曲線にそろえた</li>
+  <li>ノート、Inbox、繰り返し行のドラッグ中と、離したときの動きを加えた (macOS 26 以降)</li>
+</ul>
+]]></description>
+            <enclosure url="https://github.com/l4l4dev/FirnPlanner/releases/download/v0.8.0/FirnPlanner-0.8.0.dmg" length="38239513" type="application/octet-stream" sparkle:edSignature="exRy5nR3ZUJdMJwUu8/2d+Gq8M7u43+RW7n1QkBjk4i7zudP4h+YhvusIWg5rRTAb9fyUP8uufCw8a2Vpr6dAA=="/>
+        </item>
+        <item>
             <title>0.4.1</title>
             <pubDate>Fri, 09 Oct 2026 15:40:11 +0900</pubDate>
             <sparkle:version>6155</sparkle:version>

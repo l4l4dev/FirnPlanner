@@ -6,7 +6,10 @@
 <title>よくある質問 — FirnPlanner</title>
 <meta name="description" content="FirnPlanner のよくある質問。保存先とファイル形式、オフライン利用、動作環境、データの復元、問い合わせ先について。">
 <link rel="canonical" href="https://firnplanner.l4l4.dev/faq.html">
-<meta property="og:title" content="FirnPlanner — よくある質問">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#F0F4F9">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#051424">
+<meta property="og:title" content="よくある質問 — FirnPlanner">
 <meta property="og:description" content="FirnPlanner のよくある質問。保存先とファイル形式、オフライン利用、動作環境、データの復元、問い合わせ先について。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://firnplanner.l4l4.dev/faq.html">
@@ -16,6 +19,57 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://firnplanner.l4l4.dev/images/og-image.png">
+<meta name="twitter:title" content="よくある質問 — FirnPlanner">
+<meta name="twitter:description" content="FirnPlanner のよくある質問。保存先とファイル形式、オフライン利用、動作環境、データの復元、問い合わせ先について。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "ja",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "保存先はどこですか? Markdown を他のエディタで開いてもよいですか?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "既定の保存先は ~/Documents/FirnPlanner です (設定「ファイル」で変更できます)。日ごとのファイルは Daily/年/月/年-月-日.md (例: Daily/2026/09/2026-09-01.md)、Inbox は保存先ルート直下の Inbox.md、繰り返しタスクの定義は同じく Recurring.md に保存されます。どれも普通の Markdown ファイルなので、他のテキストエディタや AI ツールで開いて読み書きしてかまいません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "オフラインで使えますか?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい、使えます。FirnPlanner はローカルのファイルだけで動き、開発者のサーバーはありません。ネットワークを使うのは次の場合だけです: 設定で Google カレンダー連携をオンにしているときの予定の読み取り、本文に貼ったリモート画像の1回だけの取り込み、新しい版がないかの確認、匿名の使用状況の送信 (内容は含みません。詳しくはプライバシーポリシーをご覧ください)。これら以外の操作に通信は発生しません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "動作環境は?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "macOS 15.6 以降が必要です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "うっかり消してしまった内容は戻せますか?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "アプリ内の取り消し (⌘Z) は、その場で編集していた範囲に効きます。ファイルは普通の Markdown なので、それより前の状態は Time Machine などバックアップから、その日のファイルだけを取り出して戻せます。保存先を iCloud Drive や Dropbox のような同期フォルダにしている場合は、それぞれのサービスが持つバージョン履歴からも戻せます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "問い合わせ先は?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GitHub の Issues からお知らせください。"
+      }
+    }
+  ]
+}
+</script>
 <script>
 (function () {
   try {

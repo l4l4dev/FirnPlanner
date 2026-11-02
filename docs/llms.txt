@@ -1,0 +1,20 @@
+# FirnPlanner
+
+> FirnPlanner は、1日1ファイルの Markdown で予定と実績を書く macOS のデイリープランナーです。チェックボックスの行を書くとタイムラインへ自動で配置されます。
+
+## 主要な事実
+
+- 対応環境: macOS 15.6 以降
+- 価格: 無料
+- データ形式: 1日1ファイルの Markdown。既定の保存先は `~/Documents/FirnPlanner` で、日ごとのファイルは `Daily/年/月/年-月-日.md` に保存されます。他のテキストエディタでも開けます
+- オフラインで使えます。データは利用者の Mac 上のローカルファイルだけで、開発者のサーバーはありません
+- 主な機能: チェックボックス行のタイムラインへの自動配置、Inbox、やり残しの繰り越し、読み取り専用の Google カレンダー連携、タスク開始の通知、1日の締めと振り返り
+
+## リンク
+
+- [公式サイト トップ](https://firnplanner.l4l4.dev/)
+- [よくある質問](https://firnplanner.l4l4.dev/faq.html)
+- [プライバシーポリシー](https://firnplanner.l4l4.dev/privacy.html)
+- [最新版をダウンロード (dmg)](https://github.com/l4l4dev/FirnPlanner/releases/latest/download/FirnPlanner.dmg)
+- [GitHub Releases](https://github.com/l4l4dev/FirnPlanner/releases)
+- [不具合報告・要望 (GitHub Issues)](https://github.com/l4l4dev/FirnPlanner/issues)

@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>プライバシーポリシー — FirnPlanner</title>
-<meta name="description" content="FirnPlanner のプライバシーポリシー。予定・タスク・ふりかえりはあなたの Mac にだけ保存され、開発者のサーバーはありません。">
+<meta name="description" content="FirnPlanner のプライバシーポリシー。予定・タスク・ふりかえりはあなたの Mac にだけ保存され、書いた内容を預かるサーバーはありません。">
 <link rel="canonical" href="https://firnplanner.l4l4.dev/privacy.html">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F0F4F9">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#051424">
 <meta property="og:title" content="プライバシーポリシー — FirnPlanner">
-<meta property="og:description" content="FirnPlanner のプライバシーポリシー。予定・タスク・ふりかえりはあなたの Mac にだけ保存され、開発者のサーバーはありません。">
+<meta property="og:description" content="FirnPlanner のプライバシーポリシー。予定・タスク・ふりかえりはあなたの Mac にだけ保存され、書いた内容を預かるサーバーはありません。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://firnplanner.l4l4.dev/privacy.html">
 <meta property="og:locale" content="ja_JP">
@@ -20,7 +20,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://firnplanner.l4l4.dev/images/og-image.png">
 <meta name="twitter:title" content="プライバシーポリシー — FirnPlanner">
-<meta name="twitter:description" content="FirnPlanner のプライバシーポリシー。予定・タスク・ふりかえりはあなたの Mac にだけ保存され、開発者のサーバーはありません。">
+<meta name="twitter:description" content="FirnPlanner のプライバシーポリシー。予定・タスク・ふりかえりはあなたの Mac にだけ保存され、書いた内容を預かるサーバーはありません。">
 <script>
 (function () {
   try {
@@ -72,15 +72,15 @@
       <h1><span lang="ja">FirnPlanner プライバシーポリシー</span><span lang="en">FirnPlanner Privacy Policy</span></h1>
       <!-- 以下、日本語の文言は budoux -H で前処理済み (文節ごとに U+200B) -->
 
-      <p class="lede"><span lang="ja">最終更新: 2026-08-30</span><span lang="en">Last updated: 2026-08-30</span></p>
+      <p class="lede"><span lang="ja">最終更新: 2026-11-02</span><span lang="en">Last updated: 2026-11-02</span></p>
 
       <p>
-        <span lang="ja">FirnPlanner は​ macOS 上で​動く​デイリープランナーです。​あなたが​書いた​予定・タスク・ふりかえりは、​あなたが​選んだ​フォルダの​ Markdown ファイルと​して、​あなたの​ Mac にだけ保存されます。​開発者の​サーバーは​ありません。</span>
-        <span lang="en">FirnPlanner is a daily planner that runs on macOS. The schedule, tasks, and reflections you write are saved only on your Mac, as Markdown files in a folder you choose. There is no server run by the developer.</span>
+        <span lang="ja">FirnPlanner は​ macOS 上で​動く​デイリープランナーです。​あなたが​書いた​予定・タスク・ふりかえりは、​あなたが​選んだ​フォルダの​ Markdown ファイルと​して、​あなたの​ Mac にだけ保存されます。​書いた内容を​預かるサーバーは​ありません。</span>
+        <span lang="en">FirnPlanner is a daily planner that runs on macOS. The schedule, tasks, and reflections you write are saved only on your Mac, as Markdown files in a folder you choose. There is no server that stores what you write.</span>
       </p>
 
       <h2><span lang="ja">通信が​発生する​場合</span><span lang="en">When network communication occurs</span></h2>
-      <p><span lang="ja">通信が​発生するのは​次の​4つだけです。</span><span lang="en">There are only four cases where FirnPlanner communicates over the network.</span></p>
+      <p><span lang="ja">通信が​発生するのは​次の​5つだけです。</span><span lang="en">There are only five cases where FirnPlanner communicates over the network.</span></p>
       <ol>
         <li>
           <span lang="ja"><strong>Google カレンダー連携を​オンに​して​ログインした​場合</strong>: Google カレンダーの​予定を​読み取り専用 (スコープ <code>calendar.readonly</code>) で​取得し、​タイムラインに​表示します。​取得した​予定は​表示と​オフライン時の​キャッシュの​ために​あなたの​ Mac 内に​保存され、​外部には​送りません。​ログイン情報 (トークン) は​ macOS の​キーチェーンに​保存します。​設定から​ログアウトすると、​ログイン情報と​キャッシュを​削除し、​Google 側の​アクセス権も​取り消します。</span>
@@ -95,10 +95,15 @@
           <span lang="en"><strong>Checking for updates</strong>: On launch and once a day, FirnPlanner fetches the update feed (appcast.xml) from GitHub and offers new versions. When updating, it downloads the dmg from GitHub Releases. No information about your Mac or your files is sent.</span>
         </li>
         <li>
-          <span lang="ja"><strong>匿名の​使用状況の​送信</strong>: アプリの​改善の​ために、​Google アナリティクス (Firebase Analytics) へ​次の​回数だけを​送ります: 起動、​1日の​締め、​Inbox から​日付へ​送る、​繰り返しの​登録、​スニペットの​差し込み。​タスクの​タイトル・本文・ファイル名・保存先など、​あなたが​書いた​内容は​一切​送りません。​設定「ファイル」の​「使用状況を​送信する」を​オフに​すると​止まります (既定は​オン)。</span>
-          <span lang="en"><strong>Anonymous usage statistics</strong>: To improve the app, FirnPlanner sends only event counts to Google Analytics (Firebase Analytics): app launches, closing a day, sending an Inbox item to a date, registering a recurring task, and inserting a snippet. It never sends anything you wrote — no task titles, body text, file names, or folder locations. You can stop this at any time by turning off &quot;Send usage statistics&quot; under Settings &gt; Files (on by default).</span>
+          <span lang="ja"><strong>匿名の​使用状況の​送信</strong>: アプリの​改善の​ために、​Google アナリティクス (Firebase Analytics) へ​次の​回数だけを​送ります: 起動、​1日の​締め、​Inbox から​日付へ​送る、​繰り返しの​登録、​スニペットの​差し込み、​初回の​案内の​開始・スキップ・完了・途中で​閉じたこと。​タスクの​タイトル・本文・ファイル名・保存先など、​あなたが​書いた​内容は​一切​送りません。​設定「ファイル」の​「使用状況を​送信する」を​オフに​すると​止まります (既定は​オン)。</span>
+          <span lang="en"><strong>Anonymous usage statistics</strong>: To improve the app, FirnPlanner sends only event counts to Google Analytics (Firebase Analytics): app launches, closing a day, sending an Inbox item to a date, registering a recurring task, inserting a snippet, and starting, skipping, finishing, or closing the first-run tour. It never sends anything you wrote — no task titles, body text, file names, or folder locations. You can stop this at any time by turning off &quot;Send usage statistics&quot; under Settings &gt; Files (on by default).</span>
+        </li>
+        <li>
+          <span lang="ja"><strong>フィードバックを​送った場合</strong>: ヘルプメニューの​「フィードバックを​送る」で​送ると、​書いた本文と​アプリの​バージョン、​macOS の​バージョンを、​開発者の​受け口 (Cloudflare Workers) を​通して、​非公開の GitHub リポジトリの Issue と​して記録します。​送る前に、​送る中身を​画面で​確かめられます。​名前や​連絡先、​ファイルの​内容は​送りません。​受け口は​本文を​保存せず、​送りすぎを​防ぐためだけに​接続元の IP アドレスを​使います。</span>
+          <span lang="en"><strong>When you send feedback</strong>: When you choose Send Feedback in the Help menu, FirnPlanner sends the text you wrote, the app version, and the macOS version through the developer&#39;s endpoint (Cloudflare Workers), which records it as an issue in a private GitHub repository. You can review what will be sent before sending. Your name, contact details, and file contents are not sent. The endpoint does not store the text, and uses your IP address only to limit how often feedback can be sent.</span>
         </li>
       </ol>
+      <p><span lang="ja">Apple カレンダーの​予定を​表示する設定 (設定「連携」、​既定は​オフ) で​は、​macOS の​カレンダーから​予定を​読み取ります。​これは Mac の​中だけで​行われ、​通信は​発生しません。</span><span lang="en">If you turn on showing Apple Calendar events (Settings &gt; Integrations, off by default), FirnPlanner reads events from the macOS calendar. This happens on your Mac and involves no network communication.</span></p>
 
       <h2><span lang="ja">Google ユーザーデータの​取り扱い</span><span lang="en">How FirnPlanner handles Google user data</span></h2>
 
@@ -147,8 +152,8 @@
           <span lang="en">Fetched events are cached in <code>~/Library/Application Support/FirnPlanner/</code> on your Mac, for display when you are offline. File names are a hash of the account and calendar, so a file name does not reveal whose calendar it belongs to.</span>
         </li>
         <li>
-          <span lang="ja">開発者の​サーバーは​なく、​これらの​データが​あなたの​ Mac の​外に​出る​ことは​ありません。</span>
-          <span lang="en">There is no server run by the developer, so none of this data ever leaves your Mac.</span>
+          <span lang="ja">これらの​データを​受け取るサーバーは​なく、​あなたの Mac の​外に​出ることは​ありません。</span>
+          <span lang="en">No server receives this data, and it never leaves your Mac.</span>
         </li>
       </ul>
 
@@ -174,8 +179,8 @@
         <span lang="en">It does not use cookies (the tag runs without browser storage). It does not store IP addresses either. The numbers collected are used only to understand how the app is being distributed.</span>
       </p>
       <p>
-        <span lang="ja">アプリ本体 (FirnPlanner.app) が​送る​ものは、​上の​「通信が​発生する​場合」の​4番目に​書いた​匿名の​使用状況の​回数だけです。​こちらも​ Google アナリティクスへ​送られ、​設定で​止められます。</span>
-        <span lang="en">The app itself (FirnPlanner.app) sends only the anonymous usage counts described in item 4 of &quot;When network communication occurs&quot; above. These also go to Google Analytics, and can be turned off in Settings.</span>
+        <span lang="ja">アプリ本体 (FirnPlanner.app) が​ Google アナリティクスへ​送る​ものは、​上の​「通信が​発生する​場合」の​4番目に​書いた​匿名の​使用状況の​回数だけです。​設定で​止められます。</span>
+        <span lang="en">The app itself (FirnPlanner.app) sends Google Analytics only the anonymous usage counts described in item 4 of &quot;When network communication occurs&quot; above. These can be turned off in Settings.</span>
       </p>
       <p>
         <span lang="ja">詳しくは​<a href="https://policies.google.com/privacy">Google のプライバシーポリシー</a>を​ご覧ください。</span>

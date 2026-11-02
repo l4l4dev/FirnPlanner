@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs><clipPath id="brandClip"><circle cx="512" cy="512" r="440"/></clipPath></defs>
+  <circle cx="512" cy="512" r="440" fill="#F0F4F9"/>
+  <g clip-path="url(#brandClip)">
+    <path d="M60 584 C 300 500, 560 620, 980 524 L 980 1000 L 60 1000 Z" fill="#F2A93B"/>
+    <path d="M60 680.4 C 300 609, 560 711, 980 629.4 L 980 1000 L 60 1000 Z" fill="#1E2D4D"/>
+    <path d="M60 786.8 C 300 728, 560 812, 980 744.8 L 980 1000 L 60 1000 Z" fill="#051424"/>
+    <circle cx="640" cy="596" r="50" fill="#1B7FE3"/>
+  </g>
+</svg>

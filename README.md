@@ -1,47 +1,36 @@
 # FirnPlanner
 
-macOS 向けの1日プランナーです。Markdown で書いたタスクが、そのまま1日のタイムラインに並びます。
+A daily planner for macOS. Tasks you write in Markdown are placed on a one-day timeline as you type.
 
-## できること
+## Features
 
-- **本文がそのまま予定になる**: `- [ ] 資料をまとめる` のようにチェックボックスの行を書くと、その瞬間にタイムラインへ自動で配置されます。時刻や所要時間を別画面で入力する必要はありません
-- **タイムライン表示**: ドラッグで時間を動かす、端をつまんで長さを変える、といった操作で予定を調整できます。1つの時間には1つの予定だけを置く方式で、重なりは自動的に詰め直されます
-- **手書き時刻**: `- [ ] @09:30 朝会` のように行頭に時刻を書くと、その行は自動配置の対象から外れて固定されます
-- **Inbox**: 日付が決まっていないタスクを溜めておく場所です。あとから好きな日のタイムラインへ振り分けられます
-- **やり残しの繰り越し**: 前日までの未完了タスクを、今日のファイルの下にまとめて表示します。今日へ取り込む・Inbox へ送る、を選べます
-- **期限と期間**: 行末に `~10/20` と書くと期限、`10/18~10/20` と書くと期間になります。期限が近いものと過ぎたものには印が付きます
-- **繰り返し**: 毎日・曜日・毎月の日付・N 週ごとのタスクを登録すると、その日のページに入ります
-- **ノートと [[リンク]]**: タスクの行からノートを作り、`[[ ]]` でノート同士をつなげます。名前を変えるとリンクも書き換わります (設定でオンにして使います)
-- **Google・Apple カレンダー連携**: 読み取り専用で、カレンダーの予定をタイムラインの横に並べて表示できます。予定を右クリックしてタスクにすることもできます (任意)
-- **通知**: タスクの開始が近づくと macOS の通知で知らせます (行ごとに設定)
-- **1日の締め**: 一日の終わりに振り返りを書き、残った未完了を翌日以降へ送って今日を閉じます
-- **取り込みと書き出し**: NotePlan・Obsidian の日ファイルを取り込めます。PDF や、配置された時刻を書き込んだ Markdown の写しにも書き出せます
-- ファイルの実体は Markdown 1日1ファイルなので、他のエディタやツールでも読み書きできます
+- **Your text becomes the schedule**: write a checkbox line like `- [ ] Draft the report` and it is placed on the timeline right away. There is no separate screen for entering times or durations
+- **Timeline**: adjust the plan by dragging a task to move it or pulling its edge to change its length. Each time slot holds one task, and overlaps are packed again automatically
+- **Pinned times**: put a time at the start of a line, as in `- [ ] @09:30 Morning meeting`, and that line is pinned and skipped by automatic placement
+- **Inbox**: a place to keep tasks that have no date yet. You can assign them to any day's timeline later
+- **Carry-over**: unfinished tasks from earlier days are listed below today's file. You can pull them into today or send them to the Inbox
+- **Deadlines and date ranges**: end a line with `~10/20` for a deadline, or `10/18~10/20` for a range. Tasks that are due soon or overdue get a marker
+- **Recurring tasks**: register tasks that repeat daily, on chosen weekdays, on dates of the month, or every N weeks, and they appear on the right day's page
+- **Notes and [[links]]**: turn a task line into a note and connect notes with `[[ ]]`. Renaming a note updates the links (turn this on in Settings)
+- **Google and Apple Calendar**: show your calendar events next to the timeline, read-only. You can also right-click an event to turn it into a task (optional)
+- **Notifications**: macOS notifications tell you when a task is about to start (set per line)
+- **Import and export**: import daily files from NotePlan and Obsidian. Export to PDF, or to a Markdown copy with the placed times written in
+- The files are plain Markdown, one file per day, so other editors and tools can read and write them
 
-## ダウンロード
+## Download
 
-[Releases](https://github.com/l4l4dev/FirnPlanner/releases) ページから最新版をダウンロードしてください。
+Get the latest version from the [Releases](https://github.com/l4l4dev/FirnPlanner/releases) page.
 
-![FirnPlanner のメイン画面。左に Markdown の日ファイル、右にタイムライン](docs/images/screenshot-main.png)
+![The FirnPlanner main window: Markdown daily file on the left, timeline on the right](docs/images/screenshot-main.png)
 
-## インストール
+## Installation
 
-ダウンロードした dmg を開き、FirnPlanner をアプリケーションフォルダへドラッグしてください。初回起動時、書類フォルダへのアクセスを尋ねられたら許可してください。
+Open the downloaded dmg and drag FirnPlanner into your Applications folder. If you are asked to allow access to your Documents folder on first launch, allow it.
 
-## 不具合報告・要望
+## Bug reports and requests
 
-不具合を見つけた場合や、こういう機能が欲しいという要望は [Issues](https://github.com/l4l4dev/FirnPlanner/issues) からお知らせください。テンプレートに沿って書いていただけると助かります。アプリのヘルプメニューの「フィードバックを送る」からも送れます (送る内容は[プライバシーポリシー](https://firnplanner.l4l4.dev/privacy.html)に書いています)。
+If you find a bug or want a feature, please let us know in [Issues](https://github.com/l4l4dev/FirnPlanner/issues). It helps if you follow the template. You can also send feedback from the app's Help menu with Help > Send Feedback (what is sent is described in the [privacy policy](https://firnplanner.l4l4.dev/privacy.html)).
 
-## サイトのスモークテスト
+## About this repository
 
-配布サイト (`docs/`) をブラウザで開いて、3 ページ × 日本語/英語 × ライト/ダーク × 幅 1280/390 の表示とリンク切れを確かめます。手元では次のとおりです。
-
-```bash
-cd tests/site-smoke
-pnpm install && pnpm exec playwright install chromium
-pnpm test
-```
-
-## このリポジトリについて
-
-このリポジトリは FirnPlanner の配布とフィードバック受付のための窓口です。開発本体のソースコードは公開していません。
+This repository is the place where FirnPlanner is distributed and feedback is collected. The source code of the app itself is not public.

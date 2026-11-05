@@ -3,6 +3,81 @@
     <channel>
         <title>FirnPlanner</title>
         <item>
+            <title>0.10.1</title>
+            <pubDate>Thu, 05 Nov 2026 11:37:45 +0900</pubDate>
+            <sparkle:version>8255</sparkle:version>
+            <sparkle:shortVersionString>0.10.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>15.6</sparkle:minimumSystemVersion>
+            <description xml:lang="en"><![CDATA[<h3>What's New</h3>
+<ul>
+  <li>The tabs are now Today, Weekly and Plan (Weekly and Plan appear when turned on in Settings)</li>
+  <li>In a narrow window the tabs shrink instead of overlapping the summary on the right</li>
+  <li>Move and resize blocks on the 7-day timeline. Released blocks settle into the grid</li>
+  <li>Add tasks directly on the 7-day timeline. Repeating tasks on days not opened yet show as dotted previews</li>
+  <li>Click a preview to open that day, or right-click it to skip just that day</li>
+  <li>Repeating tasks and tasks with a written time are marked so you can tell them apart</li>
+  <li>Done and won&#x27;t-do blocks look the same as on the day timeline</li>
+  <li>In narrow columns the time moves to the line above the title</li>
+  <li>The plan page shows the week&#x27;s total in words, with a header over each day&#x27;s timeline</li>
+  <li>Click an empty spot once to add a block and type its title in place</li>
+  <li>Set a lunch break in Settings. It shows as a band, and auto-placed tasks avoid it</li>
+  <li>Toggle done from the checkbox on a block</li>
+  <li>Done blocks are drawn lighter, and won&#x27;t-do blocks lighter still</li>
+  <li>The time and repeat marks written in the text now show on the block</li>
+  <li>New note kind: boards (.canvas, JSON Canvas). Write cards with the keyboard (Return for a sibling, Tab for a child), or use the mouse and trackpad to add, move, connect and zoom</li>
+  <li>Tasks with a date range show in the In Progress section of the sidebar while the range includes today</li>
+  <li>Add to Someday directly, and rename or delete items there</li>
+  <li>Finish a Waiting item in the app, or send it back to the follow-up work</li>
+  <li>Right-click a won&#x27;t-do, delegated or postponed line to make it open again</li>
+  <li>Make a snippet from selected text with a right-click</li>
+  <li>Repeating tasks can have an end date</li>
+  <li>Nested bullets and numbered lists indent one step per level</li>
+  <li>The caret line is redrawn after Japanese input is committed</li>
+  <li>Change a sticky note&#x27;s color with a right-click</li>
+  <li>In the calendar list in Settings, the main calendar comes first</li>
+  <li>The goal text in Firn Light uses a brighter amber</li>
+  <li>Dark mode text uses three levels of emphasis. With Increase Contrast, secondary text is drawn closer to primary</li>
+  <li>Counts are written as plain numbers, and times use the same typeface everywhere</li>
+  <li>The update window follows the app&#x27;s language</li>
+  <li>Day closing and the weekly review are gone, along with their button, sheet and settings. Reflections already written in your files stay as they are</li>
+</ul>
+]]></description>
+            <description xml:lang="ja"><![CDATA[<h3>変更点</h3>
+<ul>
+  <li>タブを Today・Weekly・Plan にしました (Weekly と Plan は設定でオンにしたときに出ます)</li>
+  <li>ウィンドウが狭いときはタブが縮み、右側の表示と重なりません</li>
+  <li>7 日のタイムラインで、ブロックを動かす・長さを変えるができます。離すと枠に収まります</li>
+  <li>7 日のタイムラインに直接足せます。まだ開いていない日の繰り返しは点線の見込みで出します</li>
+  <li>見込みを押すとその日を開き、右クリックで「この日だけ休む」を選べます</li>
+  <li>繰り返しのタスクと、時刻を書いたタスクを見分けられるようにしました</li>
+  <li>完了・やらないにしたブロックを、日の画面と同じ見え方で出します</li>
+  <li>列が狭いときは、時刻を題の上の行に置きます</li>
+  <li>計画のページに週の合計を言葉で出し、日ごとのタイムラインに見出しを付けました</li>
+  <li>空いた所を 1 回押すと、その場で題を打てるブロックが出ます</li>
+  <li>昼休みを設定でき、タイムラインに帯で出します。自動で置く行は昼休みを避けます</li>
+  <li>ブロックの升目から、完了と未完了を切り替えられます</li>
+  <li>完了したブロックを薄く、やらないにしたブロックはさらに薄く出します</li>
+  <li>本文に書いた時刻と繰り返しの印を、ブロックに出します</li>
+  <li>ノートの新しい種類として、ボード (.canvas、JSON Canvas) を足しました。キーボード (Return で下に、Tab で子に) で書け、マウスとトラックパッドで足す・動かす・つなぐ・拡大縮小ができます</li>
+  <li>期間のあるタスクを、期間の中にある日はサイドバーの進行中の区画に出します</li>
+  <li>いつかに直接足し、題を直す・消すができます</li>
+  <li>連絡待ちの行を、アプリの中で済ませる・続きの作業に戻すができます</li>
+  <li>やらない・依頼済み・先送りにした行を、右クリックで未完了に戻せます</li>
+  <li>選んだ文から、右クリックでスニペットを作れます</li>
+  <li>繰り返しに終わりの日を書けます</li>
+  <li>入れ子の箇条書きと番号付きリストを、1 段ごとに字下げします</li>
+  <li>日本語の変換を確定したあと、キャレットの行が描き直されないことがあったのを直しました</li>
+  <li>付箋の色を、右クリックで変えられます</li>
+  <li>設定の反映するカレンダーの一覧で、メインを一番上に置きます</li>
+  <li>Firn ライトのゴールの文字を明るい琥珀にしました</li>
+  <li>ダークの文字色を 3 段に分けました。「コントラストを上げる」をオンにすると、補助の文字を本文の色に近づけます</li>
+  <li>件数は数字だけで書き、時刻の書体をそろえました</li>
+  <li>更新の画面が、アプリの言語に合わせて出ます</li>
+  <li>締めと週のふりかえりを外しました (ボタン・シート・設定も)。日ファイルに書いてあるふりかえりはそのまま残ります</li>
+</ul>]]></description>
+            <enclosure url="https://github.com/l4l4dev/FirnPlanner/releases/download/v0.10.1/FirnPlanner-0.10.1.dmg" length="41433759" type="application/octet-stream" sparkle:edSignature="l6Y3NRBwWCQT+rYEewZJTeUXErOsmtRMMjhBQegm0AKf4dz61zjGB2q/X+s2S8bI0Tyg17eCW3bzdpffdDW7Bw=="/>
+        </item>
+        <item>
             <title>0.8.0</title>
             <pubDate>Fri, 23 Oct 2026 13:11:23 +0900</pubDate>
             <sparkle:version>7154</sparkle:version>
